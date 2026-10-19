@@ -1,0 +1,10 @@
+{
+  "MAE": 25.889280359643887,
+  "RMSE": 52.22615847959533,
+  "R2": 0.9124448048939415,
+  "MedAE": 13.648988727099606,
+  "MAPE": 3.2130456720757774,
+  "validation_MAE": 28.432905238222705,
+  "prediction_file": "outputs/final_fusion_ccrl_gnn/predictions_test_final.csv",
+  "final_prediction_column": "pred_final"
+}

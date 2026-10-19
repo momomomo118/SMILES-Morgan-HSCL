@@ -1,0 +1,12 @@
+# Python 3.10-3.12. Install a suitable PyTorch build separately.
+# Versions recorded in the RMCL supplement; not a universal environment lock.
+numpy==1.26.4
+pandas==2.3.3
+scipy==1.13.1
+scikit-learn==1.6.1
+transformers==4.40.1
+tokenizers==0.19.1
+safetensors==0.4.5
+rdkit==2025.9.2
+tqdm==4.67.1
+matplotlib==3.9.4

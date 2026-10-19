@@ -1,0 +1,886 @@
+{
+  "source_date": "2026-10-19",
+  "scope": "source-only; no datasets, weights or experimental outputs",
+  "omitted_legacy_scripts": [
+    "make_smrt_literature_comparison.py",
+    "run_fast60_local_tuning.ps1",
+    "run_lowcost_ablation.py"
+  ],
+  "files": [
+    {
+      "path": "code/blend_multi_gnn_into_best.py",
+      "source": "code/blend_multi_gnn_into_best.py",
+      "source_sha256": "5542f5ad9c3fa3036789df82a7e6eab7e7aa0e007b1bcbf8720825552436bf96",
+      "sha256": "5542f5ad9c3fa3036789df82a7e6eab7e7aa0e007b1bcbf8720825552436bf96",
+      "change": "verbatim"
+    },
+    {
+      "path": "code/build_fair_smrt_comparison.py",
+      "source": "code/build_fair_smrt_comparison.py",
+      "source_sha256": "11b7cd19f64468f376aea11f491fe26b4cab197866d904b900759a5b735a3a05",
+      "sha256": "11b7cd19f64468f376aea11f491fe26b4cab197866d904b900759a5b735a3a05",
+      "change": "verbatim"
+    },
+    {
+      "path": "code/build_key_model_comparison.py",
+      "source": "code/build_key_model_comparison.py",
+      "source_sha256": "cfe4271da474fd84a477177c32a8ddea7dcf7f48c7bcc195cb94aae8c01215ab",
+      "sha256": "cfe4271da474fd84a477177c32a8ddea7dcf7f48c7bcc195cb94aae8c01215ab",
+      "change": "verbatim"
+    },
+    {
+      "path": "code/check_predret_cleaning_need.py",
+      "source": "code/check_predret_cleaning_need.py",
+      "source_sha256": "74d886f215e0d88bdc7469bc72848b2d469f76ee019f815d0a2264676e9550ed",
+      "sha256": "74d886f215e0d88bdc7469bc72848b2d469f76ee019f815d0a2264676e9550ed",
+      "change": "verbatim"
+    },
+    {
+      "path": "code/clean_predret_transfer_data.py",
+      "source": "code/clean_predret_transfer_data.py",
+      "source_sha256": "81af6233bb74339109419b56798af5f3d760d314d276f9afbfca596067d9db94",
+      "sha256": "81af6233bb74339109419b56798af5f3d760d314d276f9afbfca596067d9db94",
+      "change": "verbatim"
+    },
+    {
+      "path": "code/evaluate_rt_predictions.py",
+      "source": "code/evaluate_rt_predictions.py",
+      "source_sha256": "22c17eb17f6667ba05cca67b8c9e35e90d83fed77e63472d8398d09db988acab",
+      "sha256": "22c17eb17f6667ba05cca67b8c9e35e90d83fed77e63472d8398d09db988acab",
+      "change": "verbatim"
+    },
+    {
+      "path": "code/generalization_frozen_20260926.py",
+      "source": "code/generalization_frozen_20260926.py",
+      "source_sha256": "2567b3d3e14a24e20a007bd37c6d66e8ee3038947d6e1eea5908b6c54c1ad719",
+      "sha256": "603ee44cae604ccead61eda51960d8e4cc93bbc8f74b40ba8603ab231e2d1676",
+      "change": "portable paths; LF line endings"
+    },
+    {
+      "path": "code/generalization_gin_features_20260926.py",
+      "source": "code/generalization_gin_features_20260926.py",
+      "source_sha256": "4885452b86c0f05fcae22d277a8dacb260f5258d34b929203ccd304deeaae691",
+      "sha256": "4885452b86c0f05fcae22d277a8dacb260f5258d34b929203ccd304deeaae691",
+      "change": "verbatim"
+    },
+    {
+      "path": "code/generalization_reuse_20260926.py",
+      "source": "code/generalization_reuse_20260926.py",
+      "source_sha256": "9d854e60dba553d49c77f6cf035939041b5f58871aa14bf58dbd986d380af754",
+      "sha256": "9d854e60dba553d49c77f6cf035939041b5f58871aa14bf58dbd986d380af754",
+      "change": "verbatim"
+    },
+    {
+      "path": "code/generalization_scaffold_20260926.py",
+      "source": "code/generalization_scaffold_20260926.py",
+      "source_sha256": "1ef3bc4c0d3e0fc710f58bb5f7d291740efcd389840e419f1aaaaebd664924dd",
+      "sha256": "1ef3bc4c0d3e0fc710f58bb5f7d291740efcd389840e419f1aaaaebd664924dd",
+      "change": "verbatim"
+    },
+    {
+      "path": "code/generate_bilingual_vector_figures.py",
+      "source": "code/generate_bilingual_vector_figures.py",
+      "source_sha256": "7aa734ac5fe9ef7db217dbc43d03914f329006c930910889f0cc70db390b6627",
+      "sha256": "ab87b3fcfa1c3fac29357a83b8befa1c8e8b01cd21941baa12d57cf28a855cc1",
+      "change": "LF line endings"
+    },
+    {
+      "path": "code/generate_split_language_vector_figures.py",
+      "source": "code/generate_split_language_vector_figures.py",
+      "source_sha256": "3cab89f7c1ee70d33c07157a31a7d55acb188fd9c154b761b1f1297623382b8b",
+      "sha256": "a61fd9d4409b4e544ec0f9725acb91212b5e8b86f18c0ba583de34e30bf3058b",
+      "change": "LF line endings"
+    },
+    {
+      "path": "code/literature_reimplementations/dnnpwa_baseline.py",
+      "source": "code/literature_reimplementations/dnnpwa_baseline.py",
+      "source_sha256": "80fdba29d5121e387535693c2c59e481b278d4e5bd52469fb600b667ca694965",
+      "sha256": "80fdba29d5121e387535693c2c59e481b278d4e5bd52469fb600b667ca694965",
+      "change": "verbatim"
+    },
+    {
+      "path": "code/literature_reimplementations/mpnn_pyg_skeleton.py",
+      "source": "code/literature_reimplementations/mpnn_pyg_skeleton.py",
+      "source_sha256": "d3ae0e7a8e7940bfeea4feabaacd24b60118b992053384d1841e8e09c1413d76",
+      "sha256": "d3ae0e7a8e7940bfeea4feabaacd24b60118b992053384d1841e8e09c1413d76",
+      "change": "verbatim"
+    },
+    {
+      "path": "code/predret_hscl_bilstm_transfer.py",
+      "source": "code/predret_hscl_bilstm_transfer.py",
+      "source_sha256": "f083a50f81857f5851425cde970004f98fe8c79d1160caab2cb927bb0da93537",
+      "sha256": "f083a50f81857f5851425cde970004f98fe8c79d1160caab2cb927bb0da93537",
+      "change": "verbatim"
+    },
+    {
+      "path": "code/predret_make_strict_report.py",
+      "source": "code/predret_make_strict_report.py",
+      "source_sha256": "075f0abe0d5a002fa156597e7fb3cc3163e84151d2404c28a740a659007ed413",
+      "sha256": "075f0abe0d5a002fa156597e7fb3cc3163e84151d2404c28a740a659007ed413",
+      "change": "verbatim"
+    },
+    {
+      "path": "code/predret_make_strict_transformer_lstm_report.py",
+      "source": "code/predret_make_strict_transformer_lstm_report.py",
+      "source_sha256": "44a586efdc419637338636d94f9e20412b91ba174f0ab7a4a9c083e2bab2feaf",
+      "sha256": "44a586efdc419637338636d94f9e20412b91ba174f0ab7a4a9c083e2bab2feaf",
+      "change": "verbatim"
+    },
+    {
+      "path": "code/predret_proposed_strict_audit.py",
+      "source": "code/predret_proposed_strict_audit.py",
+      "source_sha256": "627c357be86e1b7f8c5375ed55919d9295ea8ebe1d421b62e6abb94a44bc8d74",
+      "sha256": "627c357be86e1b7f8c5375ed55919d9295ea8ebe1d421b62e6abb94a44bc8d74",
+      "change": "verbatim"
+    },
+    {
+      "path": "code/predret_rttr_full_transfer.py",
+      "source": "code/predret_rttr_full_transfer.py",
+      "source_sha256": "ecdd2b0e585e23281bc5f0e8dc5e5a24b0492da80aff0c5e79c37f8fce7fae09",
+      "sha256": "ecdd2b0e585e23281bc5f0e8dc5e5a24b0492da80aff0c5e79c37f8fce7fae09",
+      "change": "verbatim"
+    },
+    {
+      "path": "code/predret_rttransformer_official_strict.py",
+      "source": "code/predret_rttransformer_official_strict.py",
+      "source_sha256": "8403f39d4e91b6d76041f80c33b713511c02a66083244f705d7e55dfb1c40f1b",
+      "sha256": "8403f39d4e91b6d76041f80c33b713511c02a66083244f705d7e55dfb1c40f1b",
+      "change": "verbatim"
+    },
+    {
+      "path": "code/predret_stack_full_ensemble.py",
+      "source": "code/predret_stack_full_ensemble.py",
+      "source_sha256": "28f281494d3f78d7e913fff6355ec01d165e2bca67a90ddc2aa21dfd0f5231ec",
+      "sha256": "28f281494d3f78d7e913fff6355ec01d165e2bca67a90ddc2aa21dfd0f5231ec",
+      "change": "verbatim"
+    },
+    {
+      "path": "code/predret_stack_full_ensemble_strict.py",
+      "source": "code/predret_stack_full_ensemble_strict.py",
+      "source_sha256": "f6b4664487348e078f6ce1bbda95202456a5faab3e858236919cdb2ce7f824f4",
+      "sha256": "f6b4664487348e078f6ce1bbda95202456a5faab3e858236919cdb2ce7f824f4",
+      "change": "verbatim"
+    },
+    {
+      "path": "code/predret_transformer_lstm_strict.py",
+      "source": "code/predret_transformer_lstm_strict.py",
+      "source_sha256": "398c54ff559e3a6a6bf4668d7966336582d02fee7731be4de35fb1c6511f8005",
+      "sha256": "398c54ff559e3a6a6bf4668d7966336582d02fee7731be4de35fb1c6511f8005",
+      "change": "verbatim"
+    },
+    {
+      "path": "code/prepare_predret_by_system_repeated_splits.py",
+      "source": "code/prepare_predret_by_system_repeated_splits.py",
+      "source_sha256": "6b1de39fe70dd5b50773d60e7159abe7c94028103812228fee76c4a77e726e6e",
+      "sha256": "6b1de39fe70dd5b50773d60e7159abe7c94028103812228fee76c4a77e726e6e",
+      "change": "verbatim"
+    },
+    {
+      "path": "code/prepare_predret_condition_metadata.py",
+      "source": "code/prepare_predret_condition_metadata.py",
+      "source_sha256": "285390c2d4ba9ef1d53b3b108cb96dbcca0052536e9f8b83271cabc8733bdd9d",
+      "sha256": "285390c2d4ba9ef1d53b3b108cb96dbcca0052536e9f8b83271cabc8733bdd9d",
+      "change": "verbatim"
+    },
+    {
+      "path": "code/prepare_predret_condition_protocols.py",
+      "source": "code/prepare_predret_condition_protocols.py",
+      "source_sha256": "bb49e3509dfed3a05c0a87e95e5f900b133933cffe3c9e90b9cd265a665eb7b4",
+      "sha256": "bb49e3509dfed3a05c0a87e95e5f900b133933cffe3c9e90b9cd265a665eb7b4",
+      "change": "verbatim"
+    },
+    {
+      "path": "code/prepare_predret_protocol_10fold.py",
+      "source": "code/prepare_predret_protocol_10fold.py",
+      "source_sha256": "5ee8df1638017369c219e06f52d4a35e7ae968b3b866fa82df9a570eb9e0f4f0",
+      "sha256": "5ee8df1638017369c219e06f52d4a35e7ae968b3b866fa82df9a570eb9e0f4f0",
+      "change": "verbatim"
+    },
+    {
+      "path": "code/prepare_predret_strict_10fold.py",
+      "source": "code/prepare_predret_strict_10fold.py",
+      "source_sha256": "1c35a285b5f34438e8354949f2be3cc74960e0e40c492ac1fb5bd79f92411808",
+      "sha256": "1c35a285b5f34438e8354949f2be3cc74960e0e40c492ac1fb5bd79f92411808",
+      "change": "verbatim"
+    },
+    {
+      "path": "code/prepare_report_local_validation.py",
+      "source": "code/prepare_report_local_validation.py",
+      "source_sha256": "b4d69144670d8eb57d7ae81cd848120f4b3dcd10d6e79bed7150fbac22a509b1",
+      "sha256": "b4d69144670d8eb57d7ae81cd848120f4b3dcd10d6e79bed7150fbac22a509b1",
+      "change": "verbatim"
+    },
+    {
+      "path": "code/report_generalization_20260926.py",
+      "source": "code/report_generalization_20260926.py",
+      "source_sha256": "4292b9abf3cc02a48cc88b6aea86b6667c29e8d7abe56deeab5d812e6f6fcf9e",
+      "sha256": "4292b9abf3cc02a48cc88b6aea86b6667c29e8d7abe56deeab5d812e6f6fcf9e",
+      "change": "verbatim"
+    },
+    {
+      "path": "code/requirements_minimal.txt",
+      "source": "code/requirements_minimal.txt",
+      "source_sha256": "d5dc483cc408f98f5d7d49bba74bbef0244815b2e440170f28a4a5ff571cad89",
+      "sha256": "d5dc483cc408f98f5d7d49bba74bbef0244815b2e440170f28a4a5ff571cad89",
+      "change": "verbatim"
+    },
+    {
+      "path": "code/residual_after_gnn_blend.py",
+      "source": "code/residual_after_gnn_blend.py",
+      "source_sha256": "421c39d749d9023ea10159507d96091ff3c8d6ea27e35b57d2ef322b101e007f",
+      "sha256": "421c39d749d9023ea10159507d96091ff3c8d6ea27e35b57d2ef322b101e007f",
+      "change": "verbatim"
+    },
+    {
+      "path": "code/run_abcort_fixed_split.py",
+      "source": "code/run_abcort_fixed_split.py",
+      "source_sha256": "f3626c79c1e1faf63f0b82e0364248484d9709306ba6aace071b10217c7f76ed",
+      "sha256": "f3626c79c1e1faf63f0b82e0364248484d9709306ba6aace071b10217c7f76ed",
+      "change": "verbatim"
+    },
+    {
+      "path": "code/scaffold_generalization_fusion.py",
+      "source": "code/scaffold_generalization_fusion.py",
+      "source_sha256": "e1f234209f2cfd3cb6a06ffcc8ab4a5af352ad223d16b93fae3277440423e363",
+      "sha256": "e1f234209f2cfd3cb6a06ffcc8ab4a5af352ad223d16b93fae3277440423e363",
+      "change": "verbatim"
+    },
+    {
+      "path": "code/scripts/calibrate_supcr_ensemble.py",
+      "source": "code/scripts/calibrate_supcr_ensemble.py",
+      "source_sha256": "db9e22803bdf624c22a0aec38722c56310391491c5a7ba9a78a7520ba681ad6e",
+      "sha256": "db9e22803bdf624c22a0aec38722c56310391491c5a7ba9a78a7520ba681ad6e",
+      "change": "verbatim"
+    },
+    {
+      "path": "code/scripts/generate_final_ablation_visuals.py",
+      "source": "code/scripts/generate_final_ablation_visuals.py",
+      "source_sha256": "dbc06f3ad84824f624bbf342ec83688b0f5c10256228444dd8bf2c6f6d6dad2d",
+      "sha256": "dbc06f3ad84824f624bbf342ec83688b0f5c10256228444dd8bf2c6f6d6dad2d",
+      "change": "verbatim"
+    },
+    {
+      "path": "code/scripts/prepare_stage2_data.py",
+      "source": "code/scripts/prepare_stage2_data.py",
+      "source_sha256": "950ad447fee4bf0ab040e0e33d0c1acc36f481281a017b01b07e3dee5d6a8255",
+      "sha256": "950ad447fee4bf0ab040e0e33d0c1acc36f481281a017b01b07e3dee5d6a8255",
+      "change": "verbatim"
+    },
+    {
+      "path": "code/scripts/run_single_batch_overfit.py",
+      "source": "code/scripts/run_single_batch_overfit.py",
+      "source_sha256": "35a65b45099d29bee5d7f98fc0a1643499d4e464d17aea0f825308f8f33dc326",
+      "sha256": "35a65b45099d29bee5d7f98fc0a1643499d4e464d17aea0f825308f8f33dc326",
+      "change": "verbatim"
+    },
+    {
+      "path": "code/scripts/run_stage2_baselines.py",
+      "source": "code/scripts/run_stage2_baselines.py",
+      "source_sha256": "3787ca48a61b763a6a557d8b34d53ccb2cf687e2eac817955e5989cd3abec41f",
+      "sha256": "3787ca48a61b763a6a557d8b34d53ccb2cf687e2eac817955e5989cd3abec41f",
+      "change": "verbatim"
+    },
+    {
+      "path": "code/scripts/run_stage2_error_analysis.py",
+      "source": "code/scripts/run_stage2_error_analysis.py",
+      "source_sha256": "d96f968d76057064abf2f39e97bb82a5ad697e67a84054a1e2a1a2903ebc5bdb",
+      "sha256": "d96f968d76057064abf2f39e97bb82a5ad697e67a84054a1e2a1a2903ebc5bdb",
+      "change": "verbatim"
+    },
+    {
+      "path": "code/scripts/run_stage2_scaffold_analysis.py",
+      "source": "code/scripts/run_stage2_scaffold_analysis.py",
+      "source_sha256": "6d7084cd863b5f653a5db7448eae3b398fd6dade4c27aea5c1f516bc5b7a46f0",
+      "sha256": "6d7084cd863b5f653a5db7448eae3b398fd6dade4c27aea5c1f516bc5b7a46f0",
+      "change": "verbatim"
+    },
+    {
+      "path": "code/scripts/run_supcr_tuning.sh",
+      "source": "code/scripts/run_supcr_tuning.sh",
+      "source_sha256": "33f22bbc939a5bac4af757df2c7de1be57efc830547ee68b4278cbd174cd56bc",
+      "sha256": "33f22bbc939a5bac4af757df2c7de1be57efc830547ee68b4278cbd174cd56bc",
+      "change": "verbatim"
+    },
+    {
+      "path": "code/scripts/summarize_tuning_by_val.py",
+      "source": "code/scripts/summarize_tuning_by_val.py",
+      "source_sha256": "474869571e8ce30c22eb3caa6de1e9696933323bd457a73d2240bcf04f81a37e",
+      "sha256": "474869571e8ce30c22eb3caa6de1e9696933323bd457a73d2240bcf04f81a37e",
+      "change": "verbatim"
+    },
+    {
+      "path": "code/src/losses/__init__.py",
+      "source": "code/src/losses/__init__.py",
+      "source_sha256": "d06889fb57b3b8d83ebdec27ca5b140dbddb9e428411d0e6c946c9f1a20fe260",
+      "sha256": "d06889fb57b3b8d83ebdec27ca5b140dbddb9e428411d0e6c946c9f1a20fe260",
+      "change": "verbatim"
+    },
+    {
+      "path": "code/src/losses/supcr.py",
+      "source": "code/src/losses/supcr.py",
+      "source_sha256": "2e7d1229eacb5224ed6aa582ddf0a528490c234cfe3e6c16a99e3e5424f16f72",
+      "sha256": "2e7d1229eacb5224ed6aa582ddf0a528490c234cfe3e6c16a99e3e5424f16f72",
+      "change": "verbatim"
+    },
+    {
+      "path": "code/src/losses/test_supcr_smoke.py",
+      "source": "code/src/losses/test_supcr_smoke.py",
+      "source_sha256": "6ceeb1a6b245fc92aca9b830526304dacd84a1952780969adbf3670e0f130959",
+      "sha256": "6ceeb1a6b245fc92aca9b830526304dacd84a1952780969adbf3670e0f130959",
+      "change": "verbatim"
+    },
+    {
+      "path": "code/src/net/__init__.py",
+      "source": "code/src/net/__init__.py",
+      "source_sha256": "23fb39d24d72bc7d84a3972a74b827b06b030630531451a7673d3ca76656efd3",
+      "sha256": "23fb39d24d72bc7d84a3972a74b827b06b030630531451a7673d3ca76656efd3",
+      "change": "verbatim"
+    },
+    {
+      "path": "code/src/net/bimodal_fusion.py",
+      "source": "code/src/net/bimodal_fusion.py",
+      "source_sha256": "58a4daf595fcbb036d7b13de72ee2a0af3c2533abda870534355c9c0e6e1f891",
+      "sha256": "58a4daf595fcbb036d7b13de72ee2a0af3c2533abda870534355c9c0e6e1f891",
+      "change": "verbatim"
+    },
+    {
+      "path": "code/src/net/morgan_encoder.py",
+      "source": "code/src/net/morgan_encoder.py",
+      "source_sha256": "74b3af627805eb59a14619dd8c15f563f215998b33b99693d622b45093ecb31c",
+      "sha256": "74b3af627805eb59a14619dd8c15f563f215998b33b99693d622b45093ecb31c",
+      "change": "verbatim"
+    },
+    {
+      "path": "code/src/net/multimodal_model.py",
+      "source": "code/src/net/multimodal_model.py",
+      "source_sha256": "cf5f7f3581fc233eb593a0ddf44978f4222f57c4f86694de4031ddff66bb291b",
+      "sha256": "cf5f7f3581fc233eb593a0ddf44978f4222f57c4f86694de4031ddff66bb291b",
+      "change": "verbatim"
+    },
+    {
+      "path": "code/src/net/projection_head.py",
+      "source": "code/src/net/projection_head.py",
+      "source_sha256": "7244d71097bbd1f4c54e04cee2dd0b448585db6e08899220207890e477483b50",
+      "sha256": "7244d71097bbd1f4c54e04cee2dd0b448585db6e08899220207890e477483b50",
+      "change": "verbatim"
+    },
+    {
+      "path": "code/src/net/smiles_encoder.py",
+      "source": "code/src/net/smiles_encoder.py",
+      "source_sha256": "e3d5196525941671bcf9a624bf61de4fef41178008e6740d61e3cf0d439020c9",
+      "sha256": "e3d5196525941671bcf9a624bf61de4fef41178008e6740d61e3cf0d439020c9",
+      "change": "verbatim"
+    },
+    {
+      "path": "code/src/train_morgan_only.py",
+      "source": "code/src/train_morgan_only.py",
+      "source_sha256": "8c138d87cd5dd342370820ee07c9d483f9a774dd485a1b2353943b23cfec8773",
+      "sha256": "8c138d87cd5dd342370820ee07c9d483f9a774dd485a1b2353943b23cfec8773",
+      "change": "verbatim"
+    },
+    {
+      "path": "code/src/train_multimodal.py",
+      "source": "code/src/train_multimodal.py",
+      "source_sha256": "50e7df137249b3cf01aeb5222c864dadd7d45ec100a6d10465a65332b29e62b1",
+      "sha256": "fabc06126f04d82301fca61b8676204df92418107a741cc5ac73b5af9f5247af",
+      "change": "portable paths; LF line endings"
+    },
+    {
+      "path": "code/src/train_single_modal.py",
+      "source": "code/src/train_single_modal.py",
+      "source_sha256": "d58b3092d7e9b2898acd15fa1ea7aa897e632718b5fe8a045029f8f431441f7a",
+      "sha256": "5980635e127a0baa814efdbbdbc3ee102101b9e0a15e0eaab0a3a3fe6ff24c6a",
+      "change": "portable paths; LF line endings"
+    },
+    {
+      "path": "code/src/train_smiles_only.py",
+      "source": "code/src/train_smiles_only.py",
+      "source_sha256": "5baa58471e3480c53c15dbfa1b4b0f0600f03ec05c017fa216a48a9f0958014f",
+      "sha256": "5baa58471e3480c53c15dbfa1b4b0f0600f03ec05c017fa216a48a9f0958014f",
+      "change": "verbatim"
+    },
+    {
+      "path": "code/src/utils/multimodal_dataset.py",
+      "source": "code/src/utils/multimodal_dataset.py",
+      "source_sha256": "da14a0fb3005a1cd7d5ca066893dd3f5c1234e5f41bafb34726dedccba323da4",
+      "sha256": "da14a0fb3005a1cd7d5ca066893dd3f5c1234e5f41bafb34726dedccba323da4",
+      "change": "verbatim"
+    },
+    {
+      "path": "code/src/utils/prepare_predret_data.py",
+      "source": "code/src/utils/prepare_predret_data.py",
+      "source_sha256": "fd4a351830b05136ef9b8852eaa6ac2be25261e17433421aaaf61699fceae418",
+      "sha256": "fd4a351830b05136ef9b8852eaa6ac2be25261e17433421aaaf61699fceae418",
+      "change": "verbatim"
+    },
+    {
+      "path": "code/src/utils/prepare_unified_data.py",
+      "source": "code/src/utils/prepare_unified_data.py",
+      "source_sha256": "474111e12e57e7ce0865ae3983a1fa24a13881beea4c1beaf6766bb80163ec40",
+      "sha256": "474111e12e57e7ce0865ae3983a1fa24a13881beea4c1beaf6766bb80163ec40",
+      "change": "verbatim"
+    },
+    {
+      "path": "code/summarize_predret_repeated_runs.py",
+      "source": "code/summarize_predret_repeated_runs.py",
+      "source_sha256": "9ce9d2be0fc327381cf5b1fec68ac84ee2e1fea583604cef2df276df35ff5ae3",
+      "sha256": "9ce9d2be0fc327381cf5b1fec68ac84ee2e1fea583604cef2df276df35ff5ae3",
+      "change": "verbatim"
+    },
+    {
+      "path": "code/train_abcort_fixed_split.py",
+      "source": "code/train_abcort_fixed_split.py",
+      "source_sha256": "a948a84c4ce0f631e09a7e64bf98c09c8e77a11e9bca38c46b5dfdb3f84ed798",
+      "sha256": "a948a84c4ce0f631e09a7e64bf98c09c8e77a11e9bca38c46b5dfdb3f84ed798",
+      "change": "verbatim"
+    },
+    {
+      "path": "code/train_pure_gnn_for_ensemble.py",
+      "source": "code/train_pure_gnn_for_ensemble.py",
+      "source_sha256": "e3aee57f65744168e6053e65640f47ae1c5d7dff71873506b3af793d72e5ce72",
+      "sha256": "e3aee57f65744168e6053e65640f47ae1c5d7dff71873506b3af793d72e5ce72",
+      "change": "verbatim"
+    },
+    {
+      "path": "code/val_blend_gnn_fast.py",
+      "source": "code/val_blend_gnn_fast.py",
+      "source_sha256": "45988268cec52904847f67dbc73783a0ee780f4963cd0ec66cb5c6f5dbd93e1e",
+      "sha256": "45988268cec52904847f67dbc73783a0ee780f4963cd0ec66cb5c6f5dbd93e1e",
+      "change": "verbatim"
+    },
+    {
+      "path": "code/verify_reproduction.py",
+      "source": "code/verify_reproduction.py",
+      "source_sha256": "f8cef01631944dcd27f6b55246232b0f7e064685c3f172eef85add8dfe4d54c5",
+      "sha256": "f8cef01631944dcd27f6b55246232b0f7e064685c3f172eef85add8dfe4d54c5",
+      "change": "verbatim"
+    },
+    {
+      "path": "scripts/run_final_fusion_ccrl_gnn.py",
+      "source": "scripts/run_final_fusion_ccrl_gnn.py",
+      "source_sha256": "b49c9275cfc5a662cda74ee739c2241b6e6f978555b7969b20851706e28caf48",
+      "sha256": "b49c9275cfc5a662cda74ee739c2241b6e6f978555b7969b20851706e28caf48",
+      "change": "verbatim"
+    },
+    {
+      "path": "scripts/run_final_fusion_five_branch.py",
+      "source": "scripts/run_final_fusion_five_branch.py",
+      "source_sha256": "77b6fc188085737e9dd8fb4a89115245f10a957d342b52bcf2de5c40efd207dd",
+      "sha256": "77b6fc188085737e9dd8fb4a89115245f10a957d342b52bcf2de5c40efd207dd",
+      "change": "verbatim"
+    },
+    {
+      "path": "scripts/run_strict_pipeline_ablation.py",
+      "source": "scripts/run_strict_pipeline_ablation.py",
+      "source_sha256": "b7f91cc07001d193f82647af0caf22287b4025cefa22b30b3fce9f24c7b834dc",
+      "sha256": "d6b96ba5f1e4f4bc5729499e444dfad5621f2d91105c26cf90e7d54693465eeb",
+      "change": "LF line endings"
+    },
+    {
+      "path": "scripts/paper_ablation_runner_20260825.py",
+      "source": "scripts/paper_ablation_runner_20260825.py",
+      "source_sha256": "d1211bdc92587275ccd8f9506d49304bf0763563831f391757939edd7c300dbf",
+      "sha256": "d1211bdc92587275ccd8f9506d49304bf0763563831f391757939edd7c300dbf",
+      "change": "verbatim"
+    },
+    {
+      "path": "scripts/paper_ablation_audit_20260825.py",
+      "source": "scripts/paper_ablation_audit_20260825.py",
+      "source_sha256": "fb7bc6bf1a95c8ec14a60d15114f58f1f0d5d2a32c50010ebafa258da31f4c05",
+      "sha256": "fb7bc6bf1a95c8ec14a60d15114f58f1f0d5d2a32c50010ebafa258da31f4c05",
+      "change": "verbatim"
+    },
+    {
+      "path": "scripts/audit_simplified_mcrl_20261011.py",
+      "source": "scripts/audit_simplified_mcrl_20261011.py",
+      "source_sha256": "0f441b5704d1384c636ba85c629023640ebf5b8e7be0d789c534b4e745b15dd2",
+      "sha256": "0f441b5704d1384c636ba85c629023640ebf5b8e7be0d789c534b4e745b15dd2",
+      "change": "verbatim"
+    },
+    {
+      "path": "scripts/evaluate_simplified_mcrl_20261011.py",
+      "source": "scripts/evaluate_simplified_mcrl_20261011.py",
+      "source_sha256": "1d1c19670c97d1b6bc17476e29be0097f2882a7b381b75192cd6c2557b7fa0d9",
+      "sha256": "1d1c19670c97d1b6bc17476e29be0097f2882a7b381b75192cd6c2557b7fa0d9",
+      "change": "verbatim"
+    },
+    {
+      "path": "scripts/report_simplified_mcrl_20261011.py",
+      "source": "scripts/report_simplified_mcrl_20261011.py",
+      "source_sha256": "8afd269683e0073244e819dd13be804cce340246a3869352dd850410a52f1f79",
+      "sha256": "a63d0cc7ef6ee9d69095a9f40bb56d5af80c448d5e22accff877baa7f6ae2eca",
+      "change": "portable paths; LF line endings"
+    },
+    {
+      "path": "scripts/plot_final_prediction_scatter.py",
+      "source": "scripts/plot_final_prediction_scatter.py",
+      "source_sha256": "08db94bc0eb98b12cc4ba84e46b153ac75bb334667f80d756fc8d2b7e7957f77",
+      "sha256": "08db94bc0eb98b12cc4ba84e46b153ac75bb334667f80d756fc8d2b7e7957f77",
+      "change": "verbatim"
+    },
+    {
+      "path": "scripts/generate_signed_error_histogram.py",
+      "source": "scripts/generate_signed_error_histogram.py",
+      "source_sha256": "de92ce5ebf284228cfd30f2940bfbed03073fea3e98e2b3c7af6ab83dd7ccbe9",
+      "sha256": "de92ce5ebf284228cfd30f2940bfbed03073fea3e98e2b3c7af6ab83dd7ccbe9",
+      "change": "verbatim"
+    },
+    {
+      "path": "scripts/probe_runtime_env.py",
+      "source": "scripts/probe_runtime_env.py",
+      "source_sha256": "23e756b5eca90045eabe51796e139656e059d0c0fdb91ed389c2063f33758383",
+      "sha256": "23e756b5eca90045eabe51796e139656e059d0c0fdb91ed389c2063f33758383",
+      "change": "verbatim"
+    },
+    {
+      "path": "rt_dashboard/__init__.py",
+      "source": "rt_dashboard/__init__.py",
+      "source_sha256": "ef4c22c226b4d73473d743d524f4b72979c01faec82a14a376b577357a2c532f",
+      "sha256": "ef4c22c226b4d73473d743d524f4b72979c01faec82a14a376b577357a2c532f",
+      "change": "verbatim"
+    },
+    {
+      "path": "rt_dashboard/inference.py",
+      "source": "rt_dashboard/inference.py",
+      "source_sha256": "9e6fd3f114d7469eb3a09e1cc9f710e907ac9cc53e8be6403946765a4f7f6c30",
+      "sha256": "9e6fd3f114d7469eb3a09e1cc9f710e907ac9cc53e8be6403946765a4f7f6c30",
+      "change": "verbatim"
+    },
+    {
+      "path": "rt_dashboard/README.md",
+      "source": "rt_dashboard/README.md",
+      "source_sha256": "b5e60fd1dc8ae5a0aff2fbe731c21304911408ce34217d6a2306f04932ebd650",
+      "sha256": "b5e60fd1dc8ae5a0aff2fbe731c21304911408ce34217d6a2306f04932ebd650",
+      "change": "verbatim"
+    },
+    {
+      "path": "rt_dashboard/server.py",
+      "source": "rt_dashboard/server.py",
+      "source_sha256": "9e2f6ac9b920c9c95ea3010699cb353a6588139b9b1cb90e07835c80a5d99604",
+      "sha256": "9e2f6ac9b920c9c95ea3010699cb353a6588139b9b1cb90e07835c80a5d99604",
+      "change": "verbatim"
+    },
+    {
+      "path": "rt_dashboard/web/app.js",
+      "source": "rt_dashboard/web/app.js",
+      "source_sha256": "3e85ab46f43ce80507f7b0db4b7d16e8ec854d1731e929d9b011a3fcc738d48d",
+      "sha256": "3e85ab46f43ce80507f7b0db4b7d16e8ec854d1731e929d9b011a3fcc738d48d",
+      "change": "verbatim"
+    },
+    {
+      "path": "rt_dashboard/web/index.html",
+      "source": "rt_dashboard/web/index.html",
+      "source_sha256": "6b4a355cee9797c691598cf1ba225508ecb7eedcd3e90e3882632e7a583c2993",
+      "sha256": "6b4a355cee9797c691598cf1ba225508ecb7eedcd3e90e3882632e7a583c2993",
+      "change": "verbatim"
+    },
+    {
+      "path": "rt_dashboard/web/styles.css",
+      "source": "rt_dashboard/web/styles.css",
+      "source_sha256": "6dc3e14c3ef1c9f885a631d65fdbe2ca4e1129df49f4c82705b6775208b8a9e1",
+      "sha256": "6dc3e14c3ef1c9f885a631d65fdbe2ca4e1129df49f4c82705b6775208b8a9e1",
+      "change": "verbatim"
+    },
+    {
+      "path": "run_rt_dashboard.bat",
+      "source": "run_rt_dashboard.bat",
+      "source_sha256": "d609af66d4734edc42e34f023dd88036b4d52dfb2ca161b2d2a49a8981614f31",
+      "sha256": "148020de40a0980ba716e02572c4c3d0cde58087f4cef68b1862b7a00956a0a4",
+      "change": "portable paths; LF line endings"
+    },
+    {
+      "path": "docs/model_mechanism.md",
+      "source": "docs/model_mechanism.md",
+      "source_sha256": "90e2da51207d1aba5e5c581e6a56987257aadc78b412354d06e4493bd733574c",
+      "sha256": "90e2da51207d1aba5e5c581e6a56987257aadc78b412354d06e4493bd733574c",
+      "change": "verbatim"
+    },
+    {
+      "path": "docs/predret_condition_workflow.md",
+      "source": "docs/predret_condition_workflow.md",
+      "source_sha256": "a6daf2345380e6526cd97923b290829b4a82b08a52a4e4b4d096423a7c1978bd",
+      "sha256": "a6daf2345380e6526cd97923b290829b4a82b08a52a4e4b4d096423a7c1978bd",
+      "change": "verbatim"
+    },
+    {
+      "path": "docs/original_reproduction_README.md",
+      "source": "README.md",
+      "source_sha256": "d7ec8a16173811f5a46f29efb4c4811e4ef632156ce8beabcba80f5795df9c89",
+      "sha256": "d7ec8a16173811f5a46f29efb4c4811e4ef632156ce8beabcba80f5795df9c89",
+      "change": "verbatim"
+    },
+    {
+      "path": "docs/scheme_a_model_definition.md",
+      "source": "FINAL_RELEASE_SCHEME_A/model_definition.md",
+      "source_sha256": "acb46c34c89807b0e17ba08eed495eca119671d0259385d0c656224576b63222",
+      "sha256": "a0d324d6740e71fdcccabe2e5430861e3c93f6f8b26d20e7c3acd5f3432b440c",
+      "change": "LF line endings"
+    },
+    {
+      "path": "configs/scheme_a/metrics_final.json",
+      "source": "FINAL_RELEASE_SCHEME_A/metrics/metrics_final.json",
+      "source_sha256": "5da74cb4bd6db055c31e45d1a4757ad8d2814aa1079b745ea1d6dd57382b9d9f",
+      "sha256": "da048ce9f61db501088572b01ddd3ea9fb4b5149a4e0c8be30721b1420cdc322",
+      "change": "LF line endings"
+    },
+    {
+      "path": "configs/scheme_a/weights.json",
+      "source": "FINAL_RELEASE_SCHEME_A/metrics/weights.json",
+      "source_sha256": "c27caf5b7133037ae309bf9257b051e6455f802a221f6a5facd085e35717ed1d",
+      "sha256": "33a24d517122b90576d8081d38e7bf622195faaacd88c2ad1065c5707e037a27",
+      "change": "LF line endings"
+    },
+    {
+      "path": "data/unified/README.md",
+      "source": "data/unified/README.md",
+      "source_sha256": "1807df8224f468e2962f9b907a64edf2da502a2cede3c98d6dacfbe4c4eb3109",
+      "sha256": "1807df8224f468e2962f9b907a64edf2da502a2cede3c98d6dacfbe4c4eb3109",
+      "change": "verbatim"
+    },
+    {
+      "path": "experiments/rmcl_supplement/analyze.py",
+      "source": "deliverables/RMCL_supplement_server_20261015/analyze.py",
+      "source_sha256": "f2a4e0ee96e79dc82724d415000443e1f8724f830f494ae1e51d65f5afe8c896",
+      "sha256": "f2a4e0ee96e79dc82724d415000443e1f8724f830f494ae1e51d65f5afe8c896",
+      "change": "verbatim"
+    },
+    {
+      "path": "experiments/rmcl_supplement/code/src/losses/__init__.py",
+      "source": "deliverables/RMCL_supplement_server_20261015/code/src/losses/__init__.py",
+      "source_sha256": "d06889fb57b3b8d83ebdec27ca5b140dbddb9e428411d0e6c946c9f1a20fe260",
+      "sha256": "d06889fb57b3b8d83ebdec27ca5b140dbddb9e428411d0e6c946c9f1a20fe260",
+      "change": "verbatim"
+    },
+    {
+      "path": "experiments/rmcl_supplement/code/src/losses/supcr.py",
+      "source": "deliverables/RMCL_supplement_server_20261015/code/src/losses/supcr.py",
+      "source_sha256": "2e7d1229eacb5224ed6aa582ddf0a528490c234cfe3e6c16a99e3e5424f16f72",
+      "sha256": "2e7d1229eacb5224ed6aa582ddf0a528490c234cfe3e6c16a99e3e5424f16f72",
+      "change": "verbatim"
+    },
+    {
+      "path": "experiments/rmcl_supplement/code/src/losses/test_supcr_smoke.py",
+      "source": "deliverables/RMCL_supplement_server_20261015/code/src/losses/test_supcr_smoke.py",
+      "source_sha256": "6ceeb1a6b245fc92aca9b830526304dacd84a1952780969adbf3670e0f130959",
+      "sha256": "6ceeb1a6b245fc92aca9b830526304dacd84a1952780969adbf3670e0f130959",
+      "change": "verbatim"
+    },
+    {
+      "path": "experiments/rmcl_supplement/code/src/net/__init__.py",
+      "source": "deliverables/RMCL_supplement_server_20261015/code/src/net/__init__.py",
+      "source_sha256": "23fb39d24d72bc7d84a3972a74b827b06b030630531451a7673d3ca76656efd3",
+      "sha256": "23fb39d24d72bc7d84a3972a74b827b06b030630531451a7673d3ca76656efd3",
+      "change": "verbatim"
+    },
+    {
+      "path": "experiments/rmcl_supplement/code/src/net/bimodal_fusion.py",
+      "source": "deliverables/RMCL_supplement_server_20261015/code/src/net/bimodal_fusion.py",
+      "source_sha256": "58a4daf595fcbb036d7b13de72ee2a0af3c2533abda870534355c9c0e6e1f891",
+      "sha256": "58a4daf595fcbb036d7b13de72ee2a0af3c2533abda870534355c9c0e6e1f891",
+      "change": "verbatim"
+    },
+    {
+      "path": "experiments/rmcl_supplement/code/src/net/morgan_encoder.py",
+      "source": "deliverables/RMCL_supplement_server_20261015/code/src/net/morgan_encoder.py",
+      "source_sha256": "74b3af627805eb59a14619dd8c15f563f215998b33b99693d622b45093ecb31c",
+      "sha256": "74b3af627805eb59a14619dd8c15f563f215998b33b99693d622b45093ecb31c",
+      "change": "verbatim"
+    },
+    {
+      "path": "experiments/rmcl_supplement/code/src/net/multimodal_model.py",
+      "source": "deliverables/RMCL_supplement_server_20261015/code/src/net/multimodal_model.py",
+      "source_sha256": "cf5f7f3581fc233eb593a0ddf44978f4222f57c4f86694de4031ddff66bb291b",
+      "sha256": "cf5f7f3581fc233eb593a0ddf44978f4222f57c4f86694de4031ddff66bb291b",
+      "change": "verbatim"
+    },
+    {
+      "path": "experiments/rmcl_supplement/code/src/net/projection_head.py",
+      "source": "deliverables/RMCL_supplement_server_20261015/code/src/net/projection_head.py",
+      "source_sha256": "7244d71097bbd1f4c54e04cee2dd0b448585db6e08899220207890e477483b50",
+      "sha256": "7244d71097bbd1f4c54e04cee2dd0b448585db6e08899220207890e477483b50",
+      "change": "verbatim"
+    },
+    {
+      "path": "experiments/rmcl_supplement/code/src/net/smiles_encoder.py",
+      "source": "deliverables/RMCL_supplement_server_20261015/code/src/net/smiles_encoder.py",
+      "source_sha256": "e3d5196525941671bcf9a624bf61de4fef41178008e6740d61e3cf0d439020c9",
+      "sha256": "e3d5196525941671bcf9a624bf61de4fef41178008e6740d61e3cf0d439020c9",
+      "change": "verbatim"
+    },
+    {
+      "path": "experiments/rmcl_supplement/code/src/train_morgan_only.py",
+      "source": "deliverables/RMCL_supplement_server_20261015/code/src/train_morgan_only.py",
+      "source_sha256": "8c138d87cd5dd342370820ee07c9d483f9a774dd485a1b2353943b23cfec8773",
+      "sha256": "8c138d87cd5dd342370820ee07c9d483f9a774dd485a1b2353943b23cfec8773",
+      "change": "verbatim"
+    },
+    {
+      "path": "experiments/rmcl_supplement/code/src/train_multimodal.py",
+      "source": "deliverables/RMCL_supplement_server_20261015/code/src/train_multimodal.py",
+      "source_sha256": "50e7df137249b3cf01aeb5222c864dadd7d45ec100a6d10465a65332b29e62b1",
+      "sha256": "50e7df137249b3cf01aeb5222c864dadd7d45ec100a6d10465a65332b29e62b1",
+      "change": "verbatim"
+    },
+    {
+      "path": "experiments/rmcl_supplement/code/src/train_single_modal.py",
+      "source": "deliverables/RMCL_supplement_server_20261015/code/src/train_single_modal.py",
+      "source_sha256": "d58b3092d7e9b2898acd15fa1ea7aa897e632718b5fe8a045029f8f431441f7a",
+      "sha256": "d58b3092d7e9b2898acd15fa1ea7aa897e632718b5fe8a045029f8f431441f7a",
+      "change": "verbatim"
+    },
+    {
+      "path": "experiments/rmcl_supplement/code/src/train_smiles_only.py",
+      "source": "deliverables/RMCL_supplement_server_20261015/code/src/train_smiles_only.py",
+      "source_sha256": "5baa58471e3480c53c15dbfa1b4b0f0600f03ec05c017fa216a48a9f0958014f",
+      "sha256": "5baa58471e3480c53c15dbfa1b4b0f0600f03ec05c017fa216a48a9f0958014f",
+      "change": "verbatim"
+    },
+    {
+      "path": "experiments/rmcl_supplement/code/src/utils/multimodal_dataset.py",
+      "source": "deliverables/RMCL_supplement_server_20261015/code/src/utils/multimodal_dataset.py",
+      "source_sha256": "da14a0fb3005a1cd7d5ca066893dd3f5c1234e5f41bafb34726dedccba323da4",
+      "sha256": "da14a0fb3005a1cd7d5ca066893dd3f5c1234e5f41bafb34726dedccba323da4",
+      "change": "verbatim"
+    },
+    {
+      "path": "experiments/rmcl_supplement/code/src/utils/prepare_predret_data.py",
+      "source": "deliverables/RMCL_supplement_server_20261015/code/src/utils/prepare_predret_data.py",
+      "source_sha256": "fd4a351830b05136ef9b8852eaa6ac2be25261e17433421aaaf61699fceae418",
+      "sha256": "fd4a351830b05136ef9b8852eaa6ac2be25261e17433421aaaf61699fceae418",
+      "change": "verbatim"
+    },
+    {
+      "path": "experiments/rmcl_supplement/code/src/utils/prepare_unified_data.py",
+      "source": "deliverables/RMCL_supplement_server_20261015/code/src/utils/prepare_unified_data.py",
+      "source_sha256": "474111e12e57e7ce0865ae3983a1fa24a13881beea4c1beaf6766bb80163ec40",
+      "sha256": "474111e12e57e7ce0865ae3983a1fa24a13881beea4c1beaf6766bb80163ec40",
+      "change": "verbatim"
+    },
+    {
+      "path": "experiments/rmcl_supplement/common.py",
+      "source": "deliverables/RMCL_supplement_server_20261015/common.py",
+      "source_sha256": "0f9c3ff62280d3fe8deef5d96556804d71dcd4a65ae7099d1982f6fb8923f762",
+      "sha256": "0f9c3ff62280d3fe8deef5d96556804d71dcd4a65ae7099d1982f6fb8923f762",
+      "change": "verbatim"
+    },
+    {
+      "path": "experiments/rmcl_supplement/experiment_matrix.csv",
+      "source": "deliverables/RMCL_supplement_server_20261015/experiment_matrix.csv",
+      "source_sha256": "e66387009a257ea45f437319b961c37f3f30d155b312105f931ff6ab34c66590",
+      "sha256": "e66387009a257ea45f437319b961c37f3f30d155b312105f931ff6ab34c66590",
+      "change": "verbatim"
+    },
+    {
+      "path": "experiments/rmcl_supplement/pack_results.py",
+      "source": "deliverables/RMCL_supplement_server_20261015/pack_results.py",
+      "source_sha256": "38a21e6ef9562be69bf0ed3194194655f49e73a5ea97ae1e44479247e858fec3",
+      "sha256": "38a21e6ef9562be69bf0ed3194194655f49e73a5ea97ae1e44479247e858fec3",
+      "change": "verbatim"
+    },
+    {
+      "path": "experiments/rmcl_supplement/protocol.json",
+      "source": "deliverables/RMCL_supplement_server_20261015/protocol.json",
+      "source_sha256": "03428fb25c595941b33331a3b8ae432ccc9d7b7262118e1cf1bbcfa611832509",
+      "sha256": "e47979da415619820b688fd4ef890f54621b28286affa6cc01cb1a5fb3549f7a",
+      "change": "LF line endings"
+    },
+    {
+      "path": "experiments/rmcl_supplement/reference_index.json",
+      "source": "deliverables/RMCL_supplement_server_20261015/reference_index.json",
+      "source_sha256": "319a6ba4643fcf61a23ef6568322bef23a8d37ef482f718394a3fb2c09742b1d",
+      "sha256": "b50d0e89d1898a6e9f698242a74c391a2d42456d0b32e6344439eae09918f38e",
+      "change": "LF line endings"
+    },
+    {
+      "path": "experiments/rmcl_supplement/representations.py",
+      "source": "deliverables/RMCL_supplement_server_20261015/representations.py",
+      "source_sha256": "d71c1718fa13422f68f3041ae5c0eb7dd14845a12834b9837ce3d5de6ad2f993",
+      "sha256": "d71c1718fa13422f68f3041ae5c0eb7dd14845a12834b9837ce3d5de6ad2f993",
+      "change": "verbatim"
+    },
+    {
+      "path": "experiments/rmcl_supplement/requirements.txt",
+      "source": "deliverables/RMCL_supplement_server_20261015/requirements.txt",
+      "source_sha256": "fadc9c752775f5673267b239feb1a8b80c51cd9b6d1b480cdb9ec92ba6c93f09",
+      "sha256": "fadc9c752775f5673267b239feb1a8b80c51cd9b6d1b480cdb9ec92ba6c93f09",
+      "change": "verbatim"
+    },
+    {
+      "path": "experiments/rmcl_supplement/run.py",
+      "source": "deliverables/RMCL_supplement_server_20261015/run.py",
+      "source_sha256": "0114443ff4579cde7c1584d893419ba147ed4d60b93e9b50104cd56d391aeead",
+      "sha256": "0114443ff4579cde7c1584d893419ba147ed4d60b93e9b50104cd56d391aeead",
+      "change": "verbatim"
+    },
+    {
+      "path": "experiments/rmcl_supplement/runtime.py",
+      "source": "deliverables/RMCL_supplement_server_20261015/runtime.py",
+      "source_sha256": "2fffcbf8496a88b4e73d80647ccdc6efade000b5264f519667051f69ea8c321c",
+      "sha256": "2fffcbf8496a88b4e73d80647ccdc6efade000b5264f519667051f69ea8c321c",
+      "change": "verbatim"
+    },
+    {
+      "path": "experiments/rmcl_supplement/scripts/paper_ablation_runner_20260825.py",
+      "source": "deliverables/RMCL_supplement_server_20261015/scripts/paper_ablation_runner_20260825.py",
+      "source_sha256": "d1211bdc92587275ccd8f9506d49304bf0763563831f391757939edd7c300dbf",
+      "sha256": "d1211bdc92587275ccd8f9506d49304bf0763563831f391757939edd7c300dbf",
+      "change": "verbatim"
+    },
+    {
+      "path": "experiments/rmcl_supplement/setup.sh",
+      "source": "deliverables/RMCL_supplement_server_20261015/setup.sh",
+      "source_sha256": "bb05418c3095de9bef0bc2c99864ee5845759702e1aa6b36e0ea99c8f55a669a",
+      "sha256": "bb05418c3095de9bef0bc2c99864ee5845759702e1aa6b36e0ea99c8f55a669a",
+      "change": "verbatim"
+    },
+    {
+      "path": "experiments/rmcl_supplement/start_missing.sh",
+      "source": "deliverables/RMCL_supplement_server_20261015/start_missing.sh",
+      "source_sha256": "d0195180a06c211ebcc87c8d89303441155852972b5da116cb60454abd4d6ab6",
+      "sha256": "d0195180a06c211ebcc87c8d89303441155852972b5da116cb60454abd4d6ab6",
+      "change": "verbatim"
+    },
+    {
+      "path": "experiments/rmcl_supplement/tests/check_checkpoint_compatibility.py",
+      "source": "deliverables/RMCL_supplement_server_20261015/tests/check_checkpoint_compatibility.py",
+      "source_sha256": "e88a65dccd25810f2b279e6d63c89bc7e1ba48a499235ce00caca363fc17a44d",
+      "sha256": "e88a65dccd25810f2b279e6d63c89bc7e1ba48a499235ce00caca363fc17a44d",
+      "change": "verbatim"
+    },
+    {
+      "path": "experiments/rmcl_supplement/tests/test_package.py",
+      "source": "deliverables/RMCL_supplement_server_20261015/tests/test_package.py",
+      "source_sha256": "6251bedd62f26d896c3e855c0e2df212b62e65cdef82db04926288998093bb7f",
+      "sha256": "6251bedd62f26d896c3e855c0e2df212b62e65cdef82db04926288998093bb7f",
+      "change": "verbatim"
+    },
+    {
+      "path": "experiments/rmcl_supplement/train_jobs.py",
+      "source": "deliverables/RMCL_supplement_server_20261015/train_jobs.py",
+      "source_sha256": "8d5b361de781338359ddb5c189ac365a3acb4036b2ed99317e77fff843dadfbf",
+      "sha256": "8d5b361de781338359ddb5c189ac365a3acb4036b2ed99317e77fff843dadfbf",
+      "change": "verbatim"
+    },
+    {
+      "path": "experiments/rmcl_supplement/verify_package.py",
+      "source": "deliverables/RMCL_supplement_server_20261015/verify_package.py",
+      "source_sha256": "e6d219355dc875a2ce5ff5a71050be48de359da3252d55d9bc1f8e7040d60800",
+      "sha256": "e6d219355dc875a2ce5ff5a71050be48de359da3252d55d9bc1f8e7040d60800",
+      "change": "verbatim"
+    },
+    {
+      "path": "experiments/rmcl_supplement/ORIGINAL_FULL_PACKAGE_README.md",
+      "source": "deliverables/RMCL_supplement_server_20261015/README_服务器操作说明.md",
+      "source_sha256": "4abc308154c034cbbe073cd476110d265d055ec0ef61a3167d7456927f05e645",
+      "sha256": "4abc308154c034cbbe073cd476110d265d055ec0ef61a3167d7456927f05e645",
+      "change": "verbatim"
+    },
+    {
+      "path": "tools/build_source_package.py",
+      "source": "scripts/build_github_source_package_20261019.py",
+      "source_sha256": "c7f8acb9c026fb06bf165218cfc97becad26cb6f8e665e7b866b60fd35ee88b4",
+      "sha256": "c7f8acb9c026fb06bf165218cfc97becad26cb6f8e665e7b866b60fd35ee88b4",
+      "change": "verbatim"
+    }
+  ]
+}

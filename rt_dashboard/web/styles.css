@@ -1,0 +1,221 @@
+:root {
+  --ink: #272a45;
+  --muted: #8d90a7;
+  --line: #ececf5;
+  --panel: rgba(255, 255, 255, .94);
+  --indigo: #5053b8;
+  --lavender: #9894d7;
+  --rose: #ee879e;
+  --amber: #f7b45f;
+  --shadow: 0 24px 70px rgba(73, 71, 112, .18);
+}
+
+* { box-sizing: border-box; }
+html { min-width: 320px; background: #d9d8e8; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--ink);
+  font-family: Inter, "SF Pro Display", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+  background:
+    radial-gradient(circle at 14% 8%, rgba(255,255,255,.58), transparent 18rem),
+    linear-gradient(135deg, #d7d6e5 0%, #cbcadd 100%);
+  overflow-x: hidden;
+}
+
+button, textarea { font: inherit; }
+button { color: inherit; }
+.ambient { position: fixed; border-radius: 999px; filter: blur(1px); pointer-events: none; }
+.ambient-one { width: 130px; height: 130px; left: -45px; top: 8%; border: 18px solid rgba(255,255,255,.20); }
+.ambient-two { width: 18px; height: 18px; right: 7%; bottom: 10%; background: rgba(238,135,158,.72); box-shadow: -70vw -72vh 0 -5px #7d83c5, -12vw -58vh 0 -4px #f3a3af, -82vw 4vh 0 -4px #747bbd; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+
+.shell {
+  width: min(1500px, calc(100% - 64px));
+  min-height: calc(100vh - 70px);
+  margin: 35px auto;
+  display: block;
+  background: #f8f8fc;
+  border: 1px solid rgba(255,255,255,.72);
+  border-radius: 28px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+.brand { display: flex; align-items: center; gap: 11px; padding: 0 10px 26px; color: var(--ink); text-decoration: none; font-size: 18px; font-weight: 800; letter-spacing: -.02em; }
+.brand-inline { padding: 0; flex: 0 0 auto; }
+.brand-mark { width: 28px; height: 28px; position: relative; transform: rotate(-25deg); }
+.brand-mark i { position: absolute; width: 13px; height: 22px; border-radius: 8px 8px 3px 3px; }
+.brand-mark i:nth-child(1) { background: #ef889f; left: 0; top: 2px; }
+.brand-mark i:nth-child(2) { background: #f6b35e; left: 8px; top: 0; }
+.brand-mark i:nth-child(3) { background: #595cb9; left: 15px; top: 3px; }
+.workspace { padding: 30px 34px 36px; min-width: 0; }
+.topbar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; }
+.topbar-identity { display: flex; align-items: center; gap: 28px; min-width: 0; }
+.title-block { padding-left: 28px; border-left: 1px solid #e8e8f1; }
+.eyebrow, .panel-kicker { margin: 0 0 5px; color: #aaa9bc; font-size: 9px; font-weight: 800; letter-spacing: .18em; }
+.topbar h1 { margin: 0; font-size: 25px; letter-spacing: -.04em; }
+.top-actions { display: flex; align-items: center; gap: 12px; }
+.date-pill { color: #8c8da0; font-size: 11px; }
+.icon-button, .avatar { width: 36px; height: 36px; border-radius: 12px; display: grid; place-items: center; }
+.icon-button { border: 1px solid var(--line); background: white; cursor: pointer; }
+.avatar { background: #5659b9; color: white; font-size: 11px; font-weight: 800; box-shadow: 0 8px 18px rgba(86,89,185,.25); }
+
+.metric-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 18px; }
+.metric-card { min-height: 104px; padding: 18px 20px; border-radius: 16px; color: white; box-shadow: 0 12px 22px rgba(56,54,96,.10); position: relative; overflow: hidden; }
+.metric-card::after { content: ""; position: absolute; width: 90px; height: 90px; right: -30px; top: -40px; border: 14px solid rgba(255,255,255,.10); border-radius: 50%; }
+.metric-card span, .metric-card em { display: block; font-style: normal; }
+.metric-card span { font-size: 11px; opacity: .84; }
+.metric-card strong { display: block; margin: 6px 0 2px; font-size: 24px; letter-spacing: -.04em; }
+.metric-card strong small { font-size: 11px; letter-spacing: 0; opacity: .8; }
+.metric-card em { font-size: 9px; opacity: .68; }
+.metric-card.rose { background: linear-gradient(135deg, #ee849c, #ef91a4); }
+.metric-card.indigo { background: linear-gradient(135deg, #4c50ad, #575abe); }
+.metric-card.amber { background: linear-gradient(135deg, #f4ab54, #f7b966); }
+.metric-card.violet { background: linear-gradient(135deg, #8f8bd1, #9e9adc); }
+
+.content-grid { display: grid; grid-template-columns: minmax(0, 1fr) 270px; gap: 18px; align-items: start; }
+.main-column, .right-column { display: grid; gap: 18px; min-width: 0; }
+.panel { background: var(--panel); border: 1px solid #efeff6; border-radius: 18px; box-shadow: 0 9px 24px rgba(70,69,107,.055); }
+.input-panel, .result-panel, .distribution-panel { padding: 22px 24px; }
+.panel-heading { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; margin-bottom: 17px; }
+.panel-heading.compact { margin-bottom: 12px; align-items: center; }
+.panel-heading h2 { margin: 0; font-size: 16px; letter-spacing: -.02em; }
+.model-badge { color: #595cae; background: #f1f1fb; padding: 7px 10px; border-radius: 999px; font-size: 9px; font-weight: 700; white-space: nowrap; }
+.model-badge i { display: inline-block; width: 6px; height: 6px; margin-right: 4px; border-radius: 50%; background: #65c99b; }
+.input-wrap { border: 1px solid #e1e1ed; border-radius: 14px; background: #fbfbfe; transition: border .2s, box-shadow .2s; }
+.input-wrap:focus-within { border-color: #8588cf; box-shadow: 0 0 0 4px rgba(86,89,185,.08); }
+textarea { width: 100%; min-height: 86px; resize: vertical; border: 0; outline: 0; padding: 16px 17px 8px; background: transparent; color: #343650; font-family: "SFMono-Regular", Consolas, monospace; font-size: 13px; line-height: 1.55; }
+textarea::placeholder { color: #b8b9c8; }
+.input-meta { display: flex; justify-content: space-between; padding: 0 16px 11px; color: #adaebe; font-size: 9px; }
+.quick-row { display: flex; align-items: center; justify-content: space-between; gap: 14px; margin-top: 13px; }
+.chips { display: flex; flex-wrap: wrap; gap: 7px; }
+.chip { border: 1px solid #e9e9f2; border-radius: 999px; background: #fff; padding: 7px 10px; color: #73758b; font-size: 10px; cursor: pointer; transition: .2s; }
+.chip:hover { border-color: #a4a6db; color: #5558ae; background: #f6f6fd; }
+.predict-button { min-width: 132px; border: 0; border-radius: 11px; padding: 11px 15px; display: flex; justify-content: center; gap: 12px; align-items: center; background: linear-gradient(135deg, #5155b5, #6669c6); color: white; font-size: 12px; font-weight: 700; cursor: pointer; box-shadow: 0 10px 20px rgba(81,85,181,.22); transition: transform .2s, opacity .2s; }
+.predict-button:hover { transform: translateY(-1px); }
+.predict-button:disabled { opacity: .55; cursor: wait; transform: none; }
+.button-arrow { font-size: 16px; }
+.loading-bar { margin-top: 14px; color: #777a93; font-size: 10px; display: flex; align-items: center; gap: 10px; }
+.loading-bar i { width: 14px; height: 14px; border: 2px solid #dfdff0; border-top-color: #575aba; border-radius: 50%; animation: spin .8s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.error-box { margin-top: 13px; padding: 10px 12px; border-radius: 10px; color: #b94f66; background: #fff1f4; font-size: 11px; }
+
+.result-panel { min-height: 390px; }
+.result-stage { display: grid; grid-template-columns: minmax(0, 1fr) 310px; gap: 18px; align-items: stretch; }
+.result-main { min-width: 0; display: flex; flex-direction: column; justify-content: center; }
+.result-panel.empty-state { width: 342px; min-height: 0; padding: 0; justify-self: end; border: 0; background: transparent; box-shadow: none; }
+.result-panel.empty-state > .panel-heading { display: none; }
+.result-panel.empty-state .result-stage { display: block; }
+.result-panel.empty-state .result-main { display: none; }
+.result-molecule-card { padding: 16px; border: 1px solid #ededf5; border-radius: 16px; background: linear-gradient(145deg, #fff, #fbfaff); }
+.molecule-card-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 12px; }
+.molecule-card-heading h3 { margin: 0; font-size: 15px; }
+.result-hero { display: grid; grid-template-columns: 1.4fr 130px 1fr; gap: 18px; align-items: center; padding: 18px; border-radius: 16px; background: linear-gradient(135deg, #f7f6fd, #fff9fa); }
+.result-number span, .error-summary span { display: block; color: #999aae; font-size: 10px; }
+.result-number strong { display: block; margin: 6px 0 0; font-size: 46px; color: #4e51ae; letter-spacing: -.06em; }
+.result-number strong::after { content: " s"; font-size: 15px; color: #9294b0; letter-spacing: 0; }
+.result-number small { color: #999bad; font-size: 10px; }
+.confidence-ring { --value: 65; width: 104px; height: 104px; margin: auto; border-radius: 50%; display: grid; place-items: center; background: conic-gradient(#5b5fbc calc(var(--value) * 1%), #e7e7f3 0); position: relative; }
+.confidence-ring::before { content: ""; position: absolute; inset: 9px; border-radius: 50%; background: white; }
+.confidence-ring div { z-index: 1; text-align: center; }
+.confidence-ring strong, .confidence-ring small { display: block; }
+.confidence-ring strong { font-size: 18px; }
+.confidence-ring small { font-size: 8px; color: #9b9caf; margin-top: 2px; }
+.error-summary { padding-left: 18px; border-left: 1px solid #e6e5f0; }
+.error-summary strong { display: block; margin: 8px 0 6px; color: #e2768f; font-size: 27px; letter-spacing: -.04em; }
+.error-summary strong::before { content: "± "; font-size: 16px; }
+.error-summary strong::after { content: " s"; font-size: 11px; color: #999aae; }
+.error-summary small { color: #999aae; font-size: 9px; line-height: 1.5; }
+.result-detail-grid { display: grid; grid-template-columns: 1.8fr .7fr .7fr; gap: 10px; margin-top: 12px; }
+.canonical-box, .signal-card { padding: 12px 13px; border: 1px solid #ececf4; border-radius: 12px; background: white; min-width: 0; }
+.canonical-box span, .signal-card span { display: block; color: #9d9eb0; font-size: 9px; }
+.canonical-box code { display: block; margin: 7px 0 5px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: #55576d; font-size: 10px; }
+.canonical-box button { border: 0; padding: 0; background: transparent; color: #5c5fb9; font-size: 9px; cursor: pointer; }
+.signal-card strong { display: block; margin: 7px 0 4px; font-size: 16px; }
+.signal-card small { color: #aaaabc; font-size: 8px; }
+.mini-progress { height: 4px; border-radius: 9px; background: #ededf5; overflow: hidden; }
+.mini-progress i { display: block; width: 0; height: 100%; border-radius: inherit; background: #6669c6; transition: width .5s; }
+.result-note { margin: 11px 2px 0; color: #a0a1b2; font-size: 9px; line-height: 1.55; }
+.timestamp { color: #a9aabc; font-size: 9px; }
+
+.distribution-panel { min-height: 230px; }
+.legend { display: flex; gap: 11px; color: #8f90a3; font-size: 9px; }
+.legend span::before { content: ""; display: inline-block; width: 7px; height: 7px; border-radius: 2px; margin-right: 4px; }
+.l-base::before { background: #ef8ba1; }
+.l-gnn::before { background: #5b5fbc; }
+#branchChart { width: 100%; height: 165px; display: block; }
+
+.right-column .panel { padding: 18px; }
+.soft-icon { width: 29px; height: 29px; display: grid; place-items: center; border-radius: 9px; color: #5b5eb8; background: #f1f1fb; }
+.molecule-preview { height: 190px; border-radius: 14px; background: linear-gradient(145deg, #fafaff, #fff8fa); overflow: hidden; display: grid; place-items: center; }
+.molecule-preview img { width: 100%; height: 100%; object-fit: contain; mix-blend-mode: multiply; }
+.placeholder-molecule { color: #aaaad6; font-size: 62px; opacity: .65; }
+.molecule-name { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; margin: 14px 2px 10px; }
+.molecule-name strong { font-size: 15px; }
+.molecule-name span { color: #999aad; font-size: 9px; }
+.property-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.property-grid div { padding: 10px; border-radius: 11px; background: #f8f8fc; }
+.property-grid span, .property-grid strong { display: block; }
+.property-grid span { color: #a0a1b3; font-size: 8px; }
+.property-grid strong { margin-top: 4px; font-size: 12px; }
+.health-pill { padding: 5px 8px; border-radius: 999px; color: #318562; background: #eaf8f1; font-size: 8px; font-weight: 700; }
+.health-pill.loading { color: #8d7d47; background: #fff7dc; }
+.health-pill.error { color: #b94f66; background: #fff0f3; }
+.health-list { display: grid; gap: 0; }
+.health-list div { display: flex; justify-content: space-between; padding: 11px 0; border-bottom: 1px solid #f0f0f5; font-size: 10px; }
+.health-list div:last-child { border-bottom: 0; }
+.health-list span { color: #9c9daf; }
+.health-list strong { font-size: 10px; }
+.info-panel { display: flex; gap: 12px; background: linear-gradient(145deg, #f1f1fc, #fbf4f8); }
+.info-icon { flex: 0 0 auto; width: 26px; height: 26px; display: grid; place-items: center; border-radius: 50%; color: white; background: #686bc3; font: 700 12px Georgia, serif; }
+.info-panel strong { display: block; font-size: 11px; }
+.info-panel p { margin: 5px 0 0; color: #9394a8; font-size: 9px; line-height: 1.55; }
+
+@media (max-width: 1180px) {
+  .shell { width: calc(100% - 30px); }
+  .workspace { padding: 25px 22px 30px; }
+  .content-grid { grid-template-columns: minmax(0, 1fr) 235px; }
+  .result-stage { grid-template-columns: minmax(0, 1fr) 280px; }
+  .result-hero { grid-template-columns: 1.2fr 105px .9fr; }
+  .confidence-ring { width: 90px; height: 90px; }
+}
+@media (max-width: 920px) {
+  .shell { display: block; margin: 15px auto; min-height: auto; }
+  .content-grid { grid-template-columns: 1fr; }
+  .right-column { grid-template-columns: 1fr 1fr; }
+  .info-panel { grid-column: 1 / -1; }
+}
+@media (max-width: 820px) {
+  .result-stage { grid-template-columns: 1fr; }
+  .result-panel.empty-state { width: 100%; }
+  .result-molecule-card { display: grid; grid-template-columns: minmax(220px, .9fr) 1fr; gap: 0 18px; align-items: center; }
+  .molecule-card-heading { grid-column: 1 / -1; }
+  .molecule-preview { grid-row: 2 / span 2; height: 200px; }
+  .property-grid { align-self: end; }
+}
+@media (max-width: 680px) {
+  .shell { width: calc(100% - 16px); border-radius: 20px; }
+  .workspace { padding: 20px 13px; }
+  .topbar { align-items: flex-start; }
+  .topbar-identity { gap: 14px; }
+  .brand-inline > span:last-child { display: none; }
+  .title-block { padding-left: 14px; }
+  .date-pill, .icon-button { display: none; }
+  .metric-grid { grid-template-columns: 1fr 1fr; gap: 9px; }
+  .metric-card { min-height: 92px; padding: 15px; }
+  .content-grid, .main-column, .right-column { gap: 11px; }
+  .right-column { grid-template-columns: 1fr; }
+  .input-panel, .result-panel, .distribution-panel { padding: 17px; }
+  .model-badge { display: none; }
+  .quick-row { align-items: stretch; flex-direction: column; }
+  .predict-button { width: 100%; }
+  .result-hero { grid-template-columns: 1fr 90px; }
+  .error-summary { grid-column: 1 / -1; border-left: 0; border-top: 1px solid #e6e5f0; padding: 13px 0 0; }
+  .result-detail-grid { grid-template-columns: 1fr 1fr; }
+  .canonical-box { grid-column: 1 / -1; }
+  .result-molecule-card { display: block; }
+  .molecule-preview { height: 190px; }
+}

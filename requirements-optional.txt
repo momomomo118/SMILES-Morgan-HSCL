@@ -1,0 +1,3 @@
+# Graph baseline skeletons require a PyTorch-compatible PyG installation.
+# Core PureGIN uses native PyTorch; PyG is not needed for that branch.
+torch-geometric

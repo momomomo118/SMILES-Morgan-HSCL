@@ -1,0 +1,41 @@
+# Credentials and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+# Python and editor files
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.idea/
+.vscode/
+# Data, checkpoints, pretrained models and generated results
+data/**
+!data/unified/
+!data/unified/README.md
+checkpoints/
+pretrained/
+outputs/
+results/
+logs/
+work/
+tmp/
+experiments/rmcl_supplement/data/
+**/checkpoints/
+**/pretrained/
+**/results/
+**/outputs/
+**/reference/
+*.pt
+*.pth
+*.bin
+*.safetensors
+*.pkl
+*.pickle
+*.npz
+*.npy
+*.zip
+*.log

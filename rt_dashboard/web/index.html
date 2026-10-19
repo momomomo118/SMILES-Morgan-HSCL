@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="基于 SMILES–Morgan HSCL 与 PureGIN 集成模型的 SMRT 保留时间预测工作台">
+  <title>RetainLab · SMRT 保留时间预测</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+  <main class="shell">
+    <section class="workspace">
+      <header class="topbar">
+        <div class="topbar-identity">
+          <a class="brand brand-inline" href="#" aria-label="RetainLab 首页">
+            <span class="brand-mark"><i></i><i></i><i></i></span>
+            <span>RetainLab</span>
+          </a>
+          <div class="title-block">
+            <p class="eyebrow">SMRT RETENTION INTELLIGENCE</p>
+            <h1>保留时间预测工作台</h1>
+          </div>
+        </div>
+        <div class="top-actions">
+          <span class="date-pill">SMRT · seconds</span>
+          <button class="icon-button" type="button" aria-label="帮助">?</button>
+          <div class="avatar">RT</div>
+        </div>
+      </header>
+
+      <section class="metric-grid" aria-label="模型性能">
+        <article class="metric-card rose"><span>测试集 MAE</span><strong id="maeMetric">26.052 <small>s</small></strong><em>平均绝对误差</em></article>
+        <article class="metric-card indigo"><span>决定系数 R²</span><strong id="r2Metric">0.9116</strong><em>SMRT 固定测试集</em></article>
+        <article class="metric-card amber"><span>测试集 RMSE</span><strong id="rmseMetric">52.480 <small>s</small></strong><em>均方根误差</em></article>
+        <article class="metric-card violet"><span>推理分支</span><strong>8 <small>checkpoints</small></strong><em>5 HSCL + 3 PureGIN</em></article>
+      </section>
+
+      <section class="content-grid">
+        <div class="main-column">
+          <article class="panel input-panel">
+            <div class="panel-heading">
+              <div><p class="panel-kicker">NEW PREDICTION</p><h2>输入 SMILES 序列</h2></div>
+              <span class="model-badge"><i></i> SMILES–Morgan HSCL</span>
+            </div>
+            <label class="sr-only" for="smilesInput">SMILES 序列</label>
+            <div class="input-wrap">
+              <textarea id="smilesInput" rows="3" spellcheck="false" placeholder="例如：Cn1c(=O)c2c(ncn2C)n(C)c1=O"></textarea>
+              <div class="input-meta"><span id="charCount">0 / 512</span><span id="validationText">支持手性、环结构与离子表达</span></div>
+            </div>
+            <div class="quick-row">
+              <div id="exampleChips" class="chips" aria-label="示例分子"></div>
+              <button id="predictButton" class="predict-button" type="button">
+                <span class="button-label">开始预测</span><span class="button-arrow">→</span>
+              </button>
+            </div>
+            <div id="loadingBar" class="loading-bar" hidden><i></i><span>正在运行多模型集成，首次加载可能需要一些时间…</span></div>
+            <div id="errorBox" class="error-box" role="alert" hidden></div>
+          </article>
+
+          <article id="resultPanel" class="panel result-panel empty-state">
+            <div class="panel-heading">
+              <div><p class="panel-kicker">PREDICTION RESULT</p><h2>预测结果</h2></div>
+              <span id="resultTimestamp" class="timestamp">等待输入</span>
+            </div>
+
+            <div class="result-stage">
+              <div class="result-main">
+                <div id="resultContent" class="result-content" hidden>
+                  <div class="result-hero">
+                    <div class="result-number">
+                      <span>预测保留时间</span>
+                      <strong id="predictionValue">—</strong>
+                      <small>秒 · <b id="predictionMinutes">—</b> 分钟</small>
+                    </div>
+                    <div class="confidence-ring" id="confidenceRing"><div><strong id="confidenceValue">—</strong><small>可信度</small></div></div>
+                    <div class="error-summary">
+                      <span>预计绝对误差</span>
+                      <strong id="errorValue">—</strong>
+                      <small id="intervalValue">90% 参考区间：—</small>
+                    </div>
+                  </div>
+
+                  <div class="result-detail-grid">
+                    <div class="canonical-box"><span>Canonical SMILES</span><code id="canonicalValue">—</code><button id="copyButton" type="button">复制</button></div>
+                    <div class="signal-card"><span>近邻相似度</span><strong id="similarityValue">—</strong><div class="mini-progress"><i id="similarityBar"></i></div></div>
+                    <div class="signal-card"><span>集成分歧</span><strong id="disagreementValue">—</strong><small>分支标准差</small></div>
+                  </div>
+                  <p class="result-note" id="resultNote"></p>
+                </div>
+              </div>
+
+              <section class="result-molecule-card" aria-label="分子信息">
+                <div class="molecule-card-heading">
+                  <div><p class="panel-kicker">MOLECULE</p><h3>分子信息</h3></div>
+                  <span class="soft-icon">⌬</span>
+                </div>
+                <div class="molecule-preview" id="moleculePreview"><div class="placeholder-molecule">⌬</div></div>
+                <div class="molecule-name"><strong id="formulaValue">等待预测</strong><span id="weightValue">—</span></div>
+                <div class="property-grid">
+                  <div><span>LogP</span><strong id="logpValue">—</strong></div>
+                  <div><span>TPSA</span><strong id="tpsaValue">—</strong></div>
+                  <div><span>环数量</span><strong id="ringsValue">—</strong></div>
+                  <div><span>重原子</span><strong id="atomsValue">—</strong></div>
+                </div>
+              </section>
+            </div>
+          </article>
+
+          <article class="panel distribution-panel">
+            <div class="panel-heading compact">
+              <div><p class="panel-kicker">MODEL PROFILE</p><h2>集成分支预测</h2></div>
+              <div class="legend"><span class="l-base">HSCL</span><span class="l-gnn">PureGIN</span></div>
+            </div>
+            <canvas id="branchChart" width="900" height="260" aria-label="模型分支预测柱状图"></canvas>
+          </article>
+        </div>
+
+        <aside class="right-column">
+          <article class="panel health-panel">
+            <div class="panel-heading compact"><div><p class="panel-kicker">SYSTEM</p><h2>模型状态</h2></div><span id="healthPill" class="health-pill loading">检查中</span></div>
+            <div class="health-list">
+              <div><span>数据集</span><strong>SMRT</strong></div>
+              <div><span>计算设备</span><strong id="deviceValue">—</strong></div>
+              <div><span>模型权重</span><strong>已校验</strong></div>
+              <div><span>推理耗时</span><strong id="latencyValue">—</strong></div>
+            </div>
+          </article>
+
+          <article class="panel info-panel">
+            <div class="info-icon">i</div>
+            <div><strong>如何理解误差值？</strong><p>对未知分子不存在真实误差。页面显示的是验证集相似分子表现与模型分歧共同给出的预计绝对误差。</p></div>
+          </article>
+        </aside>
+      </section>
+    </section>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>

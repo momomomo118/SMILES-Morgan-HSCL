@@ -1,0 +1,61 @@
+{
+  "package": "RMCL_supplement_server_20261015",
+  "created_date": "2026-10-15 Asia/Shanghai",
+  "scope": "Single SMILES-Morgan predictor; no PureGIN/PTDF/Top6 training",
+  "cma_definition": "Residual cross-attention configuration, including pooled unimodal residual features and changed regression input dimension",
+  "rscl_definition": "Continuous-RT ranking ratio SupCR: cross-view alignment + similarity + fusion loss",
+  "concat_rscl_extension": "Train-only projection of concat(smiles_pooled,morgan_pooled); both SupCR terms retained; no change to regression forward path",
+  "seeds": [
+    2026,
+    777,
+    3407
+  ],
+  "default_missing_jobs": [
+    "C_concat_no_supcr_seed777",
+    "C_concat_no_supcr_seed3407",
+    "F_concat_supcr_seed2026",
+    "F_concat_supcr_seed777",
+    "F_concat_supcr_seed3407"
+  ],
+  "main_predictor": {
+    "seed": 1234,
+    "epoch": 90,
+    "MAE": 31.05748397619732,
+    "RMSE": 57.84072727330918,
+    "R2": 0.892607674760405
+  },
+  "recommended_versions": {
+    "numpy": "1.26.4",
+    "pandas": "2.3.3",
+    "sklearn": "1.6.1",
+    "transformers": "4.40.1",
+    "rdkit": "2025.09.2"
+  },
+  "recorded_server_torch": "2.7.1+cu128",
+  "legacy_local_torch": "2.3.0+cu118",
+  "selection": "Validation MAE only; Yeo-Johnson fitted on train only; test evaluated after selection; no test-based hyperparameter or checkpoint choice",
+  "resume": "Completed-epoch optimizer/scheduler/RNG resume; RDKit seeded by epoch; no bitwise-equivalence claim across devices/versions",
+  "historical_comparison": "missing plan mixes transparent historical and new runs; all plan is recommended for a uniform-environment 12-run study",
+  "representation": "Same ID subset without RT-based selection; independent t-SNE panel fits; quantitative original-space metrics required",
+  "predret": {
+    "n": 2197,
+    "source_train_overlap": 2,
+    "supervised_adaptation": true,
+    "fold_mean_and_sample_SD": true,
+    "frozen_model_separate": true
+  },
+  "scaffold": {
+    "n": 7857,
+    "MAE": 43.35276881010763,
+    "RMSE": 73.70688789828827,
+    "R2": 0.8385429295341325,
+    "caveat": "single historical split; inherited hyperparameters and runtime differences; recovered files have pre-existing CRC evidence"
+  },
+  "unavailable": [
+    "Original training project and molecular identifiers for archived 26.2352-s Transformer-LSTM",
+    "Identity-aligned DeepGCN predictions",
+    "Graphormer per-sample predictions"
+  ],
+  "packaging_did_not_train": true,
+  "packaging_did_not_generate_scientific_figures": true
+}

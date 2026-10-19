@@ -1,0 +1,37 @@
+{
+  "C_concat_no_supcr_seed2026": {
+    "checkpoint": "checkpoints/reference/C_concat_no_supcr_seed2026.pt",
+    "config": "reference/ablation/C_concat_no_supcr_seed2026/config.json",
+    "predictions": "reference/ablation/C_concat_no_supcr_seed2026/predictions_test.csv"
+  },
+  "D_residual_no_supcr_seed2026": {
+    "checkpoint": "checkpoints/reference/D_residual_no_supcr_seed2026.pt",
+    "config": "reference/ablation/D_residual_no_supcr_seed2026/config.json",
+    "predictions": "reference/ablation/D_residual_no_supcr_seed2026/predictions_test.csv"
+  },
+  "D_residual_no_supcr_seed777": {
+    "checkpoint": "checkpoints/reference/D_residual_no_supcr_seed777.pt",
+    "config": "reference/ablation/D_residual_no_supcr_seed777/config.json",
+    "predictions": "reference/ablation/D_residual_no_supcr_seed777/predictions_test.csv"
+  },
+  "D_residual_no_supcr_seed3407": {
+    "checkpoint": "checkpoints/reference/D_residual_no_supcr_seed3407.pt",
+    "config": "reference/ablation/D_residual_no_supcr_seed3407/config.json",
+    "predictions": "reference/ablation/D_residual_no_supcr_seed3407/predictions_test.csv"
+  },
+  "E_residual_supcr_seed2026": {
+    "checkpoint": "checkpoints/reference/E_residual_supcr_seed2026.pt",
+    "config": "reference/ablation/E_residual_supcr_seed2026/config.json",
+    "predictions": "reference/ablation/E_residual_supcr_seed2026/predictions_test.csv"
+  },
+  "E_residual_supcr_seed777": {
+    "checkpoint": "checkpoints/reference/E_residual_supcr_seed777.pt",
+    "config": "reference/ablation/E_residual_supcr_seed777/config.json",
+    "predictions": "reference/ablation/E_residual_supcr_seed777/predictions_test.csv"
+  },
+  "E_residual_supcr_seed3407": {
+    "checkpoint": "checkpoints/reference/E_residual_supcr_seed3407.pt",
+    "config": "reference/ablation/E_residual_supcr_seed3407/config.json",
+    "predictions": "reference/ablation/E_residual_supcr_seed3407/predictions_test.csv"
+  }
+}

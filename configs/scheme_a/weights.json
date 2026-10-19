@@ -1,0 +1,46 @@
+{
+  "final_scheme": "Scheme A: CCRL Top6 ensemble + GNN decision fusion",
+  "validation_protocol": "weights optimized on validation MAE only; test labels not used for weight selection",
+  "objective": "minimum validation MAE under wi >= 0 and sum(wi)=1",
+  "branches": [
+    {
+      "branch_name": "CCRL Top6 ensemble",
+      "canonical_column": "pred_ccrl_ensemble",
+      "source_column": "pred_ensemble",
+      "validation_source": "outputs\\top6_pool_target_power_ensemble\\predictions_val_calibrated.csv",
+      "test_source": "outputs\\top6_pool_target_power_ensemble\\predictions_test_calibrated.csv",
+      "weight": 0.3
+    },
+    {
+      "branch_name": "PureGIN seed 2026",
+      "canonical_column": "pred_g2026",
+      "source_column": "pred_rt",
+      "validation_source": "outputs\\pure_gin_seed2026\\predictions_val_gnn.csv",
+      "test_source": "outputs\\pure_gin_seed2026\\predictions_test_gnn.csv",
+      "weight": 0.24
+    },
+    {
+      "branch_name": "PureGIN seed 3407",
+      "canonical_column": "pred_g3407",
+      "source_column": "pred_rt",
+      "validation_source": "outputs\\pure_gin_seed3407\\predictions_val_gnn.csv",
+      "test_source": "outputs\\pure_gin_seed3407\\predictions_test_gnn.csv",
+      "weight": 0.18
+    },
+    {
+      "branch_name": "PureGIN seed 777",
+      "canonical_column": "pred_g777",
+      "source_column": "pred_rt",
+      "validation_source": "outputs\\pure_gin_seed777\\predictions_val_gnn.csv",
+      "test_source": "outputs\\pure_gin_seed777\\predictions_test_gnn.csv",
+      "weight": 0.28
+    }
+  ],
+  "weights": {
+    "ccrl_ensemble": 0.3,
+    "g2026": 0.24,
+    "g3407": 0.18,
+    "g777": 0.28
+  },
+  "validation_mae": 28.432905238222705
+}

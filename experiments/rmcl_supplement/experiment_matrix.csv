@@ -1,0 +1,13 @@
+variant,seed,CMA,RSCL,missing_plan_action,historical_run_id
+base,2026,0,0,reuse,C_concat_no_supcr_seed2026
+base,777,0,0,train,
+base,3407,0,0,train,
+cma,2026,1,0,reuse,D_residual_no_supcr_seed2026
+cma,777,1,0,reuse,D_residual_no_supcr_seed777
+cma,3407,1,0,reuse,D_residual_no_supcr_seed3407
+rscl,2026,0,1,train,
+rscl,777,0,1,train,
+rscl,3407,0,1,train,
+full,2026,1,1,reuse,E_residual_supcr_seed2026
+full,777,1,1,reuse,E_residual_supcr_seed777
+full,3407,1,1,reuse,E_residual_supcr_seed3407

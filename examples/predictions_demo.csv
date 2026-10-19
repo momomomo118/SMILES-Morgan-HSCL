@@ -1,0 +1,4 @@
+sample_id,true_rt,pred_rt
+synthetic_1,100,110
+synthetic_2,200,180
+synthetic_3,300,330

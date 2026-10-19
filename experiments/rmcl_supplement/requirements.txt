@@ -1,0 +1,13 @@
+# Install in a Python 3.10-3.12 environment with an already working CUDA PyTorch.
+# The recorded server used torch 2.7.1+cu128; historical local runs used 2.3.0+cu118.
+# PyTorch is deliberately not installed/replaced by this requirements file.
+numpy==1.26.4
+pandas==2.3.3
+scipy==1.13.1
+scikit-learn==1.6.1
+transformers==4.40.1
+tokenizers==0.19.1
+safetensors==0.4.5
+rdkit==2025.9.2
+tqdm==4.67.1
+matplotlib==3.9.4
