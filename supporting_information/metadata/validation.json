@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "model_training": false,
+  "model_inference": false,
+  "smrt_rows": 77980,
+  "scaffold_rows": 77980,
+  "predret_cleaned_rows": 2197,
+  "nested_folds": 100,
+  "outer_test_records": 2197,
+  "weight_rows": 800,
+  "all_nested_pairwise_overlaps_zero": true,
+  "all_outer_records_covered_once": true,
+  "scaffold_pairwise_id_canonical_murcko_overlap_zero": true,
+  "prediction_identity_and_label_checks": true,
+  "linear_blend_reconstruction": true,
+  "canonicalization_rdkit": "2025.09.2",
+  "source_file_count": 773
+}

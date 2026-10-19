@@ -1,0 +1,30 @@
+{
+  "cci_weights": {
+    "exact1234": 0.3,
+    "exact2025": 0.15,
+    "exact777": 0.0,
+    "dropout015_seed777": 0.25,
+    "lowfusion_seed777": 0.1,
+    "aug050_seed777": 0.2
+  },
+  "outer_weights": {
+    "ccrl_ensemble": 0.3,
+    "g2026": 0.24,
+    "g3407": 0.18,
+    "g777": 0.28
+  },
+  "cci_selection": "Lowest validation MAE checkpoint; nonnegative inner ensemble weights sum to one.",
+  "outer_selection": "Validation MAE optimization; fixed outer weights applied to test.",
+  "target_transform": "Yeo-Johnson and standardization fitted on training RT only; predictions returned to seconds.",
+  "validation_transform": {
+    "lambdas": [
+      -0.7087223963863211
+    ],
+    "mean": [
+      1.3984065626280282
+    ],
+    "scale": [
+      0.0018168219375864156
+    ]
+  }
+}

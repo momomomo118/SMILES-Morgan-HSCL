@@ -1,0 +1,4 @@
+model,source,split,identity_check,n,mae_s,rmse_s,medae_s,mape_pct,r2
+gcn_kensert,deliverables/RMCL_supplement_server_20261015/reference/baselines/gcn_kensert.csv,fixed_SMRT_test,"sample_id, SMILES and RT matched",7798,34.28422944216466,61.73431027936391,19.184999999999945,4.177199143037637,0.8776626816433801
+one_d_cnn_original_style,deliverables/RMCL_supplement_server_20261015/reference/baselines/one_d_cnn_original_style.csv,fixed_SMRT_test,"sample_id, SMILES and RT matched",7798,37.25490029964364,63.29919256741748,21.707989501953136,4.6210174922634755,0.8713818980629628
+gnn_rt,deliverables/RMCL_supplement_server_20261015/reference/baselines/gnn_rt.csv,fixed_SMRT_test,"sample_id, SMILES and RT matched",7798,43.72882222295205,72.77672474686888,25.845123291015625,5.594524702820705,0.8299836184007892

@@ -1,0 +1,6 @@
+system,predret_sample_id,smrt_sample_id,smrt_split,canonical_smiles,predret_rt_s,smrt_rt_s
+Cao_HILIC,predret_clean_000228,train_039054,train,CCCc1nc(C(C)(C)O)c(C(=O)O)n1Cc1ccc(-c2ccccc2-c2nn[nH]n2)cc1,137.88,687.0
+UniToyama_Atlantis,predret_clean_002137,train_024385,train,CN1C2CCC1CC(OC(=O)C(CO)c1ccccc1)C2,847.61502,638.0
+Cao_HILIC,predret_clean_000150,test_002499,test,CCN(CC)CCOc1ccc(C(=C(Cl)c2ccccc2)c2ccccc2)cc1,47.94,1008.2
+Cao_HILIC,predret_clean_000180,test_007382,test,CCCc1nc(C)c2c(=O)nc(-c3cc(S(=O)(=O)N4CCN(CC)CC4)ccc3OCC)[nH]n12,64.98,715.1
+Eawag_XBridgeC18,predret_clean_000648,test_001043,test,COc1cc(NS(=O)(=O)c2ccc(N)cc2)nc(OC)n1,342.0,680.4

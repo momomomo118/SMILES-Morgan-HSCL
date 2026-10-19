@@ -1,1 +1,4 @@
 * text=auto eol=lf
+# Preserve the exact bytes covered by the published data manifests.
+data/unified/*.csv -text
+supporting_information/** -text

@@ -1,0 +1,4 @@
+split,samples,rt_min,rt_max
+test,7798,365.0,1461.0
+train,63163,340.0,1471.7
+val,7019,496.3,1453.3

@@ -1,0 +1,36 @@
+{
+  "release_verification": {
+    "python": "3.9.25",
+    "torch": "2.3.0+cu118",
+    "cuda": "11.8",
+    "rdkit": "2022.09.5",
+    "gpu": "NVIDIA GeForce RTX 4070 Laptop GPU",
+    "role": "Release-verification runtime"
+  },
+  "single_cci_checkpoint_reevaluation": {
+    "python": "3.9.25",
+    "torch": "2.3.0+cu118",
+    "rdkit": "2025.09.2",
+    "gpu": "NVIDIA GeForce RTX 4070 Laptop GPU",
+    "role": "Checkpoint reevaluation on fixed SMRT test"
+  },
+  "scaffold_run": {
+    "python": "3.12.3",
+    "torch": "2.7.1+cu128",
+    "cuda": "12.8",
+    "numpy": "1.26.4",
+    "pandas": "2.3.3",
+    "sklearn": "1.6.1",
+    "transformers": "4.40.1",
+    "rdkit": "2025.09.2",
+    "gpu": "NVIDIA GeForce RTX 4090",
+    "platform": "Linux-5.4.0-100-generic-x86_64-with-glibc2.35",
+    "role": "Saved scaffold-run runtime"
+  },
+  "supplement_data_processing": {
+    "python": "3.9.25",
+    "rdkit": "2025.09.2",
+    "torch": "2.3.0+cu118",
+    "role": "This SI: canonicalization, saved-record checks, and metadata loading; no model execution."
+  }
+}

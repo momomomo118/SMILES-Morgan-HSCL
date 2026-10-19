@@ -1,0 +1,64 @@
+{
+  "outer_folds": 10,
+  "inner_validation_fraction": 0.1,
+  "canonical_grouping": true,
+  "split_seed": 20260909,
+  "cci_members": [
+    "exact1234",
+    "exact777",
+    "exact2025",
+    "div_dropout015_seed777"
+  ],
+  "cci_initialization": "SMRT-supervised checkpoint; full-parameter target-system fine-tuning; optimizer newly constructed",
+  "cci": {
+    "epochs": 40,
+    "patience": 6,
+    "batch_size": 8,
+    "eval_batch_size": 16,
+    "lr": 5e-05,
+    "encoder_lr": 5e-06,
+    "dropout": 0.15,
+    "smiles_augment_prob": 0.2,
+    "target_transform": "power",
+    "task_loss": "mae",
+    "temperature": 0.1,
+    "omega_align": 0.01,
+    "omega_fusion": 0.005,
+    "similarity_weight": 0.1,
+    "supcr_use_log": false
+  },
+  "puregin": {
+    "seeds": [
+      2026,
+      3407,
+      777
+    ],
+    "initialization": "New model trained on the target-system inner training subset",
+    "epochs": 180,
+    "patience": 25,
+    "batch_size": 128
+  },
+  "descriptor_predictor": {
+    "n_features": 12,
+    "models": [
+      "StandardScaler + HistGradientBoostingRegressor(max_iter=350, learning_rate=0.04, l2_regularization=0.05)",
+      "ExtraTreesRegressor(n_estimators=500, min_samples_leaf=2)"
+    ],
+    "combination": "Arithmetic mean",
+    "random_state": 20260909
+  },
+  "weight_selection": {
+    "split": "inner_validation",
+    "objective": "MAE",
+    "candidates": "Uniform vector, eight simplex vertices, and 8000 Dirichlet samples",
+    "seed": 20260909,
+    "applied_to": "outer_test"
+  },
+  "baseline": {
+    "name": "Local ChemBERTa-BiLSTM",
+    "smrt_initial_checkpoint": "checkpoints/paper_ablation_20260825/B_chemberta_bilstm_seed2026/best.pt",
+    "smrt_test_mae_s": 32.7605094352,
+    "training": "Target-system supervised adaptation on the same nested partitions"
+  },
+  "reporting": "Mean and sample SD of the ten outer-fold metrics; pooled MAE is a separately named field."
+}

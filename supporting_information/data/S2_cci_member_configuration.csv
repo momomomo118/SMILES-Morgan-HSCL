@@ -1,0 +1,7 @@
+member,checkpoint,sha256,seed,best_epoch,inner_weight,dropout,smiles_augment_prob,omega_align,omega_fusion,similarity_weight,temperature,supcr_use_log
+exact1234,checkpoints/supcr_tuning_aliases/exact1234_best.pt,22b03ab0db278757c46fde87bcff32e40c72cb9b66bc419c9ab43a506c41e485,1234,90,0.3,0.1,0.35,0.01,0.005,0.05,0.07,False
+exact2025,checkpoints/supcr_tuning_aliases/exact2025_best.pt,4d8329d9edf462f79bf0730da4e949c962b1e45f60bb77de5267b941ab50f68b,2025,62,0.15,0.1,0.35,0.01,0.005,0.05,0.07,False
+exact777,checkpoints/supcr_tuning_aliases/exact777_best.pt,60acb4d89c6a5488a687464cb0296354cd00bd3c6a80e4000adf77473c1c4da2,777,91,0.0,0.1,0.35,0.01,0.005,0.05,0.07,False
+dropout015_seed777,checkpoints/supcr_tuning/target_power_div_dropout015_seed777/best_cross_attention_residual.pt,15a219712af05f54610a4e96d64fff6ed4256b02e96503a4432885b54c79f579,777,89,0.25,0.15,0.35,0.01,0.005,0.05,0.07,False
+lowfusion_seed777,checkpoints/supcr_tuning/target_power_div_lowfusion_seed777/best_cross_attention_residual.pt,29b2c3f5763475e2064bff45326db8cf04bd44cd0bb55ee4434410b8d4dca632,777,76,0.1,0.1,0.35,0.01,0.002,0.03,0.07,False
+aug050_seed777,checkpoints/supcr_tuning/target_power_div_aug050_seed777/best_cross_attention_residual.pt,92efe5d8f6d28ae8aa6d5f38cafa2943ce0e1ade9cd318f084fa11b611ce935a,777,75,0.2,0.1,0.5,0.01,0.005,0.05,0.07,False

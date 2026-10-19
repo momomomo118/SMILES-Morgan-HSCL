@@ -1,0 +1,427 @@
+{
+  "tables": [
+    {
+      "path": "data/S1_smrt_random_assignments.csv",
+      "rows": 77980,
+      "columns": [
+        "sample_id",
+        "smiles",
+        "rt",
+        "split",
+        "canonical_smiles",
+        "murcko_scaffold"
+      ],
+      "description": "Fixed SMRT random partition; RT in seconds; canonical and Murcko keys recomputed for this supplement."
+    },
+    {
+      "path": "data/S1_smrt_scaffold_assignments.csv",
+      "rows": 77980,
+      "columns": [
+        "sample_id",
+        "smiles",
+        "rt",
+        "split",
+        "canonical_smiles",
+        "murcko_scaffold",
+        "stored_scaffold_group"
+      ],
+      "description": "Fixed scaffold partition, original group keys and recomputed structural keys."
+    },
+    {
+      "path": "data/S1_smrt_split_statistics.csv",
+      "rows": 6,
+      "columns": [
+        "dataset",
+        "split",
+        "n",
+        "rt_min_s",
+        "rt_max_s",
+        "rt_mean_s",
+        "rt_median_s",
+        "rt_sd_s",
+        "unique_canonical",
+        "unique_murcko"
+      ],
+      "description": "Counts and descriptive statistics for the two fixed SMRT partitions."
+    },
+    {
+      "path": "data/S1_predret_cleaned.csv",
+      "rows": 2197,
+      "columns": [
+        "sample_id",
+        "system",
+        "smiles",
+        "canonical_smiles",
+        "rt",
+        "n_merged",
+        "rt_source_min",
+        "rt_source_max",
+        "rt_source_std",
+        "source_row"
+      ],
+      "description": "Selected cleaned PredRet records; RT and source RT fields are seconds; contributor account fields are not part of this table."
+    },
+    {
+      "path": "data/S1_predret_system_statistics.csv",
+      "rows": 10,
+      "columns": [
+        "system",
+        "input_rows",
+        "removed_nonpositive_or_nonfinite",
+        "valid_rows_before_merge",
+        "duplicate_rows_collapsed",
+        "merged_groups",
+        "cleaned_rows",
+        "rt_min_s",
+        "rt_max_s",
+        "rt_mean_s",
+        "rt_median_s",
+        "rt_sd_s"
+      ],
+      "description": "Ten-system input counts, duplicate-merging balance and cleaned RT statistics."
+    },
+    {
+      "path": "data/S1_overlap_checks.csv",
+      "rows": 66,
+      "columns": [
+        "dataset",
+        "left",
+        "right",
+        "key",
+        "shared_unique"
+      ],
+      "description": "Shared unique identities/groups; cross-system sharing is tabulated separately from within-fold partition checks."
+    },
+    {
+      "path": "data/S1_predret_smrt_shared_identities.csv",
+      "rows": 5,
+      "columns": [
+        "system",
+        "predret_sample_id",
+        "smrt_sample_id",
+        "smrt_split",
+        "canonical_smiles",
+        "predret_rt_s",
+        "smrt_rt_s"
+      ],
+      "description": "Canonical molecular identities shared by cleaned PredRet and a fixed SMRT subset."
+    },
+    {
+      "path": "data/S1_predret_fold_assignments.csv",
+      "rows": 21970,
+      "columns": [
+        "system",
+        "outer_fold",
+        "sample_id",
+        "role"
+      ],
+      "description": "Exact role of each cleaned record in each of ten outer folds; join to S1_predret_cleaned.csv by sample_id."
+    },
+    {
+      "path": "data/S1_predret_nested_fold_checks.csv",
+      "rows": 100,
+      "columns": [
+        "system",
+        "outer_fold",
+        "inner_train_n",
+        "inner_validation_n",
+        "outer_test_n",
+        "train_val_sample_id_overlap",
+        "train_val_canonical_smiles_overlap",
+        "train_test_sample_id_overlap",
+        "train_test_canonical_smiles_overlap",
+        "val_test_sample_id_overlap",
+        "val_test_canonical_smiles_overlap"
+      ],
+      "description": "Recomputed ID/canonical separation for all 100 system-fold combinations."
+    },
+    {
+      "path": "data/S2_cci_member_configuration.csv",
+      "rows": 6,
+      "columns": [
+        "member",
+        "checkpoint",
+        "sha256",
+        "seed",
+        "best_epoch",
+        "inner_weight",
+        "dropout",
+        "smiles_augment_prob",
+        "omega_align",
+        "omega_fusion",
+        "similarity_weight",
+        "temperature",
+        "supcr_use_log"
+      ],
+      "description": "Member-specific checkpoint arguments and validation-selected inner weights."
+    },
+    {
+      "path": "data/S2_puregin_member_configuration.csv",
+      "rows": 3,
+      "columns": [
+        "member",
+        "seed",
+        "best_epoch",
+        "layers",
+        "hidden",
+        "dropout",
+        "lr",
+        "batch_size",
+        "max_epochs",
+        "patience",
+        "sha256"
+      ],
+      "description": "Three graph-branch checkpoint configurations."
+    },
+    {
+      "path": "data/S2_puregin_metrics.csv",
+      "rows": 6,
+      "columns": [
+        "model",
+        "split",
+        "n",
+        "mae_s",
+        "rmse_s",
+        "medae_s",
+        "mape_pct",
+        "r2"
+      ],
+      "description": "Metrics recomputed from saved predictions against the corresponding fixed SMRT partition."
+    },
+    {
+      "path": "data/S2_smrt_ensemble_metrics.csv",
+      "rows": 4,
+      "columns": [
+        "model",
+        "split",
+        "n",
+        "mae_s",
+        "rmse_s",
+        "medae_s",
+        "mape_pct",
+        "r2"
+      ],
+      "description": "CCI ensemble and final Scheme A metrics recomputed from their saved prediction definitions."
+    },
+    {
+      "path": "data/S2_smrt_final_predictions.csv",
+      "rows": 14817,
+      "columns": [
+        "split",
+        "sample_id",
+        "smiles",
+        "ccrl_ensemble",
+        "g2026",
+        "g3407",
+        "g777",
+        "true_rt",
+        "pred_final_ccrl_gnn_ptdf"
+      ],
+      "description": "Final saved validation/test predictions and their component values; no new inference."
+    },
+    {
+      "path": "data/S3_baseline_metrics_and_sources.csv",
+      "rows": 3,
+      "columns": [
+        "model",
+        "source",
+        "split",
+        "identity_check",
+        "n",
+        "mae_s",
+        "rmse_s",
+        "medae_s",
+        "mape_pct",
+        "r2"
+      ],
+      "description": "Identity-aligned retained baseline prediction records, evaluated on the fixed SMRT test set."
+    },
+    {
+      "path": "data/S3_baseline_test_predictions.csv",
+      "rows": 23394,
+      "columns": [
+        "model",
+        "sample_id",
+        "smiles",
+        "true_rt",
+        "pred_rt"
+      ],
+      "description": "Prediction values underlying the retained baseline rows."
+    },
+    {
+      "path": "data/S3_ablation_run_metrics.csv",
+      "rows": 10,
+      "columns": [
+        "run_id",
+        "variant",
+        "seed",
+        "source",
+        "n",
+        "mae_s",
+        "rmse_s",
+        "medae_s",
+        "mape_pct",
+        "r2"
+      ],
+      "description": "Retained saved-prediction ablations; identifiers and true RT checked against fixed test."
+    },
+    {
+      "path": "data/S3_ablation_test_predictions.csv",
+      "rows": 77980,
+      "columns": [
+        "run_id",
+        "sample_id",
+        "smiles",
+        "true_rt",
+        "pred_rt"
+      ],
+      "description": "Saved predictions for retained ablation runs."
+    },
+    {
+      "path": "data/S3_rtcl_seed_pairs.csv",
+      "rows": 3,
+      "columns": [
+        "seed",
+        "without_rtcl_mae_s",
+        "with_rtcl_mae_s",
+        "mae_reduction_s"
+      ],
+      "description": "Paired three-seed D versus E comparison; positive reduction denotes lower MAE with RTCL."
+    },
+    {
+      "path": "data/S4_scaffold_metrics.csv",
+      "rows": 2,
+      "columns": [
+        "split",
+        "n",
+        "mae_s",
+        "rmse_s",
+        "medae_s",
+        "mape_pct",
+        "r2"
+      ],
+      "description": "Saved fixed-coefficient scaffold validation/test predictions evaluated against fixed scaffold truth."
+    },
+    {
+      "path": "data/S4_scaffold_predictions.csv",
+      "rows": 14892,
+      "columns": [
+        "split",
+        "sample_id",
+        "smiles",
+        "true_rt",
+        "pred_exact1234",
+        "pred_dropout015",
+        "pred_lowfusion",
+        "pred_aug050",
+        "pred_exact2025",
+        "pred_cci_ensemble",
+        "pred_gin2026",
+        "pred_gin3407",
+        "pred_gin777",
+        "pred_mcrl"
+      ],
+      "description": "Saved scaffold component and final predictions."
+    },
+    {
+      "path": "data/S4_predret_fold_results.csv",
+      "rows": 100,
+      "columns": [
+        "system",
+        "outer_fold",
+        "n_test",
+        "n_inner_train",
+        "n_inner_validation",
+        "proposed_val_mae_s",
+        "baseline_best_epoch",
+        "baseline_val_mae_s",
+        "proposed_mae_s",
+        "proposed_rmse_s",
+        "proposed_medae_s",
+        "proposed_mape_pct",
+        "proposed_r2",
+        "baseline_mae_s",
+        "baseline_rmse_s",
+        "baseline_medae_s",
+        "baseline_mape_pct",
+        "baseline_r2",
+        "delta_mae_s"
+      ],
+      "description": "All 100 folds, recomputed from saved predictions with the fixed outer-test truth; MAE/RMSE/MedAE seconds, MAPE percent."
+    },
+    {
+      "path": "data/S4_predret_system_results.csv",
+      "rows": 10,
+      "columns": [
+        "system",
+        "n_folds",
+        "n_molecules",
+        "proposed_mae_s_mean",
+        "proposed_mae_s_sd",
+        "proposed_rmse_s_mean",
+        "proposed_rmse_s_sd",
+        "proposed_medae_s_mean",
+        "proposed_medae_s_sd",
+        "proposed_mape_pct_mean",
+        "proposed_mape_pct_sd",
+        "proposed_r2_mean",
+        "proposed_r2_sd",
+        "proposed_pooled_mae_s",
+        "baseline_mae_s_mean",
+        "baseline_mae_s_sd",
+        "baseline_rmse_s_mean",
+        "baseline_rmse_s_sd",
+        "baseline_medae_s_mean",
+        "baseline_medae_s_sd",
+        "baseline_mape_pct_mean",
+        "baseline_mape_pct_sd",
+        "baseline_r2_mean",
+        "baseline_r2_sd",
+        "baseline_pooled_mae_s",
+        "delta_fold_mean_mae_s"
+      ],
+      "description": "Arithmetic fold means and sample SD (ddof=1); pooled MAE reported separately."
+    },
+    {
+      "path": "data/S4_predret_fold_weights.csv",
+      "rows": 800,
+      "columns": [
+        "system",
+        "outer_fold",
+        "predictor",
+        "weight"
+      ],
+      "description": "Eight-candidate simplex weights selected on the corresponding inner validation set."
+    },
+    {
+      "path": "data/S4_predret_outer_test_predictions.csv",
+      "rows": 2197,
+      "columns": [
+        "system",
+        "outer_fold",
+        "sample_id",
+        "smiles",
+        "canonical_smiles",
+        "true_rt",
+        "proposed_pred_rt",
+        "baseline_pred_rt"
+      ],
+      "description": "Each cleaned record occurs once as outer test in its own system; both methods share the same truth."
+    }
+  ],
+  "units": {
+    "rt": "seconds",
+    "mae_s": "seconds",
+    "rmse_s": "seconds",
+    "medae_s": "seconds",
+    "mape_pct": "percent",
+    "r2": "dimensionless"
+  },
+  "keys": {
+    "smrt": "sample_id",
+    "predret": "system + sample_id",
+    "nested_fold": "system + outer_fold + sample_id"
+  },
+  "sd": "Sample standard deviation (ddof=1).",
+  "path_policy": "Project-relative source paths; machine-specific prefixes normalized in config JSON."
+}

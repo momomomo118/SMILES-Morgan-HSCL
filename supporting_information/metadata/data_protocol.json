@@ -1,0 +1,38 @@
+{
+  "rt_unit": "seconds",
+  "canonicalization_rdkit": "2025.09.2",
+  "canonicalization": "canonical isomeric SMILES",
+  "scaffold": "RDKit Bemis-Murcko, includeChirality=False",
+  "smrt_fixed_input_rows": 77980,
+  "predret_selected_input_rows": 2392,
+  "predret_positive_rows": 2391,
+  "predret_cleaned_rows": 2197,
+  "predret_collapsed_duplicate_rows": 194,
+  "predret_merge": "median by (system, smiles)",
+  "strict_protocol": {
+    "input": "data/external_predret/transfer_10_systems_cleaned/all_cleaned.csv",
+    "output_dir": "data/external_predret/transfer_10_systems_cleaned_strict_10fold",
+    "cleaned_rows": 2197,
+    "systems": [
+      "Eawag_XBridgeC18",
+      "FEM_Lipids",
+      "FEM_long",
+      "FEM_short",
+      "IPB_Halle",
+      "LIFE_new",
+      "LIFE_old",
+      "UniToyama_Atlantis",
+      "Cao_HILIC",
+      "MTBLS87"
+    ],
+    "outer_folds": 10,
+    "inner_validation_fraction": 0.1,
+    "seed": 20260909,
+    "canonicalization_counts": {
+      "rdkit_canonical": 2197
+    },
+    "splitter": "sklearn.model_selection.GroupKFold",
+    "passed": true
+  },
+  "outer_test_coverage": "Each selected record occurs exactly once as outer test within its chromatographic system."
+}

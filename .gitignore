@@ -16,6 +16,11 @@ venv/
 data/**
 !data/unified/
 !data/unified/README.md
+!data/unified/train.csv
+!data/unified/val.csv
+!data/unified/test.csv
+!data/unified/all.csv
+!data/unified/summary.csv
 checkpoints/
 pretrained/
 outputs/

@@ -2,7 +2,7 @@
 
 用于 LC–MS 保留时间预测的研究源码：SMILES/Morgan 双分支、监督对比学习、PureGIN 及决策融合。
 
-这是 **2026-10-19 整理的源码包**。包含模型、训练、数据处理、评估、消融、泛化和本地预测界面。实验数据、模型权重、预训练文件、逐样本预测及历史运行输出需要另行取得；仅克隆本仓库无法重现已归档数值。
+这是 **2026-10-19 整理并补充复现数据的研究仓库**。包含模型、训练、数据处理、评估、消融、泛化和本地预测界面，以及固定数据划分、模型配置和保存的预测结果。数据入口与使用命令见 [复现数据说明](docs/REPRODUCTION_DATA.md)；黑白版 SI 和 CSV／JSON 见 [supporting_information/](supporting_information/)。预训练文件与神经网络 checkpoint 需另行取得。
 
 ## 版本与结果口径
 
@@ -38,6 +38,14 @@ python -B code/evaluate_rt_predictions.py --predictions examples/predictions_dem
 
 示例只有三条人工构造的 RT 数值，不含真实分子或实验预测。预期 MAE=20 s，RMSE≈21.6025 s，R²=0.93；用于检查评估入口，不能作为科学结果。
 
+## 已公开的复现数据
+
+- `data/unified/`：77,980 条 SMRT 记录的原始固定 train／val／test 划分及合并表。
+- `supporting_information/`：19 页 SI、25 份 CSV 和 15 份 JSON，覆盖 scaffold、PredRet、配置、基线和消融结果。
+- `python -B tools/prepare_reproduction_data.py`：按已公布的划分导出 scaffold 数据及 PredRet 的 100 个系统／折训练输入。
+
+完整字段、数据来源与使用步骤见 [docs/REPRODUCTION_DATA.md](docs/REPRODUCTION_DATA.md)。本次数据发布可直接核验保存的预测与数值结果；模型训练仍需相应的预训练模型和配置。
+
 ## 数据与模型文件
 
 | 本地路径 | 需要的材料 |
@@ -47,7 +55,7 @@ python -B code/evaluate_rt_predictions.py --predictions examples/predictions_dem
 | `checkpoints/` | 与运行配置匹配的 CCRL 和 PureGIN checkpoint |
 | `outputs/` | 若重算历史融合，需原 CCRL/PureGIN validation/test 预测和配置 |
 
-SMILES 与 Morgan 必须共享同一行的分子、标签和划分。不能为两个模态单独随机切分。原数据和第三方模型的取得、许可与引用由其来源规定；本源码包不重新分发这些文件。原复现包的材料清单保留在 `docs/original_reproduction_README.md`，其中提到的权重和预测不在此 GitHub 源码包中。
+SMILES 与 Morgan 必须共享同一行的分子、标签和划分。不能为两个模态单独随机切分。已发布的数据和预测范围见上述复现数据说明；原数据保留原始来源与条款。第三方模型需按其来源取得。原复现包的历史材料清单保留在 `docs/original_reproduction_README.md`。
 
 ## 双分支训练入口
 

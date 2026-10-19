@@ -1,0 +1,23 @@
+{
+  "experiment": "MCRL fixed-coefficient scaffold evaluation, five active CCI predictors plus three reused scaffold GINs",
+  "cci_weights": {
+    "exact1234": 0.3,
+    "dropout015": 0.25,
+    "lowfusion": 0.1,
+    "aug050": 0.2,
+    "exact2025": 0.15
+  },
+  "outer_weights": {
+    "cci": 0.3,
+    "gin2026": 0.24,
+    "gin3407": 0.18,
+    "gin777": 0.28
+  },
+  "skipped_zero_weight_member": "exact777",
+  "initialization": "Unsupervised ChemBERTa only; other layers fresh. No SMRT-supervised weights or optimizer loaded.",
+  "selection": "Scaffold validation MAE only. Max 200 epochs; early stopping patience 20; original ReduceLROnPlateau.",
+  "transform": "PowerTransformer and tail quantile fitted on scaffold train only.",
+  "fusion": "Historical coefficients fixed before new training; no refitting on scaffold validation or test.",
+  "test_use": "Final predictions after all five members have completed validation-based selection.",
+  "reuse": "Three archived scaffold GIN val/test predictions, ID/SMILES/RT/hash checked; no GIN retraining or re-inference."
+}

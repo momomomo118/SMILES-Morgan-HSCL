@@ -1,0 +1,122 @@
+{
+  "2026": {
+    "checkpoint": "checkpoints/gnn/pure_gin_seed2026/best_pure_gin.pt",
+    "sha256": "65e03cac36cb3d0b4c3c1ff1955e2f0400b0c1bd88c621578d43752afc7f7d9b",
+    "best_epoch": 160,
+    "args": {
+      "output_dir": "src/outputs/gnn/pure_gin_seed2026",
+      "cache_dir": "src/outputs/gnn/pure_gin_cache",
+      "epochs": 180,
+      "patience": 25,
+      "batch_size": 128,
+      "lr": 0.0008,
+      "seed": 2026,
+      "device": "cuda"
+    },
+    "architecture": {
+      "atom_input_dim": 21,
+      "hidden": 256,
+      "layers": 5,
+      "descriptor_dim": 10,
+      "descriptor_projection": 64,
+      "graph_pooling": [
+        "mean",
+        "max"
+      ],
+      "head_dimensions": [
+        576,
+        256,
+        64,
+        1
+      ],
+      "dropout": 0.15
+    },
+    "training": {
+      "optimizer": "AdamW",
+      "weight_decay": 0.0001,
+      "loss": "SmoothL1Loss(beta=20)",
+      "scheduler": "CosineAnnealingWarmRestarts(T_0=20)",
+      "selection": "Minimum validation MAE"
+    }
+  },
+  "3407": {
+    "checkpoint": "checkpoints/gnn/pure_gin_seed3407/best_pure_gin.pt",
+    "sha256": "295e16f87d1a57ba1a71031191e52808f9780707d96d02daaf38319eb4c58f0b",
+    "best_epoch": 180,
+    "args": {
+      "output_dir": "src/outputs/gnn/pure_gin_seed3407",
+      "cache_dir": "src/outputs/gnn/pure_gin_cache",
+      "epochs": 180,
+      "patience": 25,
+      "batch_size": 128,
+      "lr": 0.0008,
+      "seed": 3407,
+      "device": "cuda"
+    },
+    "architecture": {
+      "atom_input_dim": 21,
+      "hidden": 256,
+      "layers": 5,
+      "descriptor_dim": 10,
+      "descriptor_projection": 64,
+      "graph_pooling": [
+        "mean",
+        "max"
+      ],
+      "head_dimensions": [
+        576,
+        256,
+        64,
+        1
+      ],
+      "dropout": 0.15
+    },
+    "training": {
+      "optimizer": "AdamW",
+      "weight_decay": 0.0001,
+      "loss": "SmoothL1Loss(beta=20)",
+      "scheduler": "CosineAnnealingWarmRestarts(T_0=20)",
+      "selection": "Minimum validation MAE"
+    }
+  },
+  "777": {
+    "checkpoint": "checkpoints/gnn/pure_gin_seed777/best_pure_gin.pt",
+    "sha256": "da9855b4be566606f6188de0220217ef11d9b2a2788ee8b27261aa430a6ecdf5",
+    "best_epoch": 178,
+    "args": {
+      "output_dir": "src/outputs/gnn/pure_gin_seed777",
+      "cache_dir": "src/outputs/gnn/pure_gin_cache",
+      "epochs": 180,
+      "patience": 25,
+      "batch_size": 128,
+      "lr": 0.0008,
+      "seed": 777,
+      "device": "cuda"
+    },
+    "architecture": {
+      "atom_input_dim": 21,
+      "hidden": 256,
+      "layers": 5,
+      "descriptor_dim": 10,
+      "descriptor_projection": 64,
+      "graph_pooling": [
+        "mean",
+        "max"
+      ],
+      "head_dimensions": [
+        576,
+        256,
+        64,
+        1
+      ],
+      "dropout": 0.15
+    },
+    "training": {
+      "optimizer": "AdamW",
+      "weight_decay": 0.0001,
+      "loss": "SmoothL1Loss(beta=20)",
+      "scheduler": "CosineAnnealingWarmRestarts(T_0=20)",
+      "selection": "Minimum validation MAE"
+    }
+  }
+}

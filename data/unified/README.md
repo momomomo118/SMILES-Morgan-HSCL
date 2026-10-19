@@ -29,3 +29,7 @@ Both branches must read these same files:
 
 Do not let the Morgan branch run a separate random split. The multimodal model
 requires both branches to see the same molecule and label at each index.
+
+## Published version
+
+These CSV inputs are included in the repository. The fixed split has 63,163 training, 7,019 validation and 7,798 test records (77,980 total). Scaffold and PredRet assignments, source citations and export commands are documented in [REPRODUCTION_DATA.md](../../docs/REPRODUCTION_DATA.md).
