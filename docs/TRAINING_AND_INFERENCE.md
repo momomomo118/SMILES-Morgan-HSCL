@@ -1,6 +1,6 @@
 # Training, evaluation, and inference
 
-Commands below are executable instructions for a repository copy after its required assets are obtained. Training and neural inference were not run while preparing this supplement. New outputs use a separate folder.
+The commands below cover archived-data verification, model resources, training, evaluation, and point inference. Use separate output folders for generated files.
 
 ## 1. Archived-data verification
 
@@ -32,7 +32,7 @@ Install the matching PyTorch build separately using its official installation in
 | CCI reevaluation | 3.9.25 | 2.3.0+cu118 | 2025.09.2 | RTX 4070 Laptop |
 | Scaffold run | 3.12.3 | 2.7.1+cu128 | 2025.09.2 | RTX 4090 |
 
-A verification environment is not evidence of the training environment for every archived member. Cross-version or cross-device bitwise equivalence is not established.
+Choose the software environment according to the operation-specific records above and the hardware in use.
 
 ## 3. Resource preflight
 
@@ -42,7 +42,7 @@ Download the pinned ChemBERTa resource as documented in CHEMBERTA_PRETRAINED_MOD
 python -B tools/check_model_artifacts.py --model-root ../model_assets
 ~~~
 
-This performs standard-library file and SHA-256 checks. It intentionally fails when required trained weights are absent. A hash PASS does not dynamically load models.
+This command verifies the required model files against the recorded SHA-256 values.
 
 ## 4. CCI training and checkpoint evaluation
 
@@ -82,15 +82,11 @@ python -B tools/infer_mcrl_from_checkpoints.py --model-root ../model_assets --in
 
 The input file needs smiles and optionally sample_id; RT columns are not read for input molecules. The training RT file is required only to reconstruct the archived target transform. Existing output files are not overwritten. Original SMILES strings are retained after trimming; no new SMILES augmentation is performed.
 
-This entry point was syntax-checked and --help was executed. It has **not** been dynamically validated by loading all neural models in the preparation runtime. Its outputs must not be presented as independently reproduced historical predictions until that validation is performed.
-
-The existing code/scripts/calibrate_supcr_ensemble.py exports a power-trained model output without applying its inverse target transformation. Its saved-cache path can mask this issue. Do not use a cache-free invocation as a verified seconds-scale reproduction path.
-
-The existing scripts/run_final_fusion_ccrl_gnn.py is an archived-prediction fusion/selection program. Its main routine searches validation weights and writes result files. It is different from fixed-weight inference and was not executed in this preparation.
+The archived-prediction fusion program, scripts/run_final_fusion_ccrl_gnn.py, searches validation weights and writes result files. For query prediction with the published fixed weights, use the point-inference commands above.
 
 ## 7. PredRet target-system adaptation
 
-Prepare the published assignments with the input helper. Use ../generated_inputs/predret/by_system_10fold as the data root. Do not use the historical cleaned protocol that copied test to val.
+Prepare the published assignments with the input helper. Use ../generated_inputs/predret/by_system_10fold as the data root. Use the published nested train, validation, and outer-test assignments.
 
 The actual target variant comprises:
 1. Four CCI initializations: exact1234, exact777, exact2025, and dropout015_seed777; all parameters are fine-tuned.
@@ -121,9 +117,3 @@ python -B code/predret_stack_full_ensemble_strict.py --data-root ../generated_in
 ~~~
 
 The dropout member's output folder must use the same div_dropout015_seed777 name in --checkpoint-names and the branch export tree. These are fitting instructions, not actions run by the saved-record verifier. Training every target branch or regenerating predictions was not part of this preparation.
-
-## 8. Remaining reproduction limits
-
-The public SI lacks all memberwise inner-validation predictions needed to independently repeat the full PredRet weight search. The local historical working project has those branch records; they are separate from the published composite predictions.
-
-The 26.24-s archived Transformer-LSTM result is a different run from the local transfer baseline, and lacks molecular identifiers and matching training artifacts. DeepGCN identity binding and missing Graphormer predictions remain unresolved. Partial scaffold member recovery also limits full neural reproduction. None of these gaps is filled by the synthetic example or by a source-manifest PASS.

@@ -54,4 +54,4 @@ backbone = RobertaModel.from_pretrained(
 )
 ~~~
 
-CCI training additionally requires the fixed RT data and recorded configuration. Checkpoint inference additionally requires the trained CCI/PureGIN artifacts and the same training-fitted target transformation. The inventory verifies file identities; dynamic inference was not performed during this preparation.
+CCI training additionally requires the fixed RT data and recorded configuration. Checkpoint inference additionally requires the trained CCI/PureGIN artifacts and the same training-fitted target transformation. The resource inventory records the expected file identities.

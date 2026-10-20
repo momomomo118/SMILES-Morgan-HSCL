@@ -781,8 +781,8 @@
       "path": "experiments/rmcl_supplement/protocol.json",
       "source": "deliverables/RMCL_supplement_server_20261015/protocol.json",
       "source_sha256": "03428fb25c595941b33331a3b8ae432ccc9d7b7262118e1cf1bbcfa611832509",
-      "sha256": "e47979da415619820b688fd4ef890f54621b28286affa6cc01cb1a5fb3549f7a",
-      "change": "LF line endings"
+      "sha256": "ddfbd96e1fa98addf08e30409c78afcc90851adb4477e9aa0179bed792cf6cbb",
+      "change": "publication documentation update"
     },
     {
       "path": "experiments/rmcl_supplement/reference_index.json",
@@ -869,30 +869,12 @@
       "change": "verbatim"
     },
     {
-      "path": "experiments/rmcl_supplement/ORIGINAL_FULL_PACKAGE_README.md",
-      "source": "deliverables/RMCL_supplement_server_20261015/README_服务器操作说明.md",
-      "source_sha256": "4abc308154c034cbbe073cd476110d265d055ec0ef61a3167d7456927f05e645",
-      "sha256": "4abc308154c034cbbe073cd476110d265d055ec0ef61a3167d7456927f05e645",
-      "change": "verbatim"
-    },
-    {
       "path": "tools/build_source_package.py",
       "source": "scripts/build_github_source_package_20261019.py",
       "source_sha256": "c7f8acb9c026fb06bf165218cfc97becad26cb6f8e665e7b866b60fd35ee88b4",
-      "sha256": "c7f8acb9c026fb06bf165218cfc97becad26cb6f8e665e7b866b60fd35ee88b4",
-      "change": "verbatim"
+      "sha256": "87b5a37ad5c4fc521aca65944ff2c41e12f0e4fef9f1f8c664bae7622965339e",
+      "change": "publication documentation update"
     }
   ],
-  "review_reconciliation": {
-    "date": "2026-10-20",
-    "note": "Original source_sha256 fields are retained; output documentation hash reconciled to the reviewed public content. New preparation files are tracked by SOURCE_MANIFEST.json and B_PREPARATION_PROVENANCE.json.",
-    "entries": [
-      {
-        "path": "data/unified/README.md",
-        "historical_recorded_sha256": "1807df8224f468e2962f9b907a64edf2da502a2cede3c98d6dacfbe4c4eb3109",
-        "current_public_sha256": "68cf9d9de513ff7f9c7ea242b1b59bf969df0a3e2628b42147b20765cee4c5f3",
-        "review_copy_sha256": "68cf9d9de513ff7f9c7ea242b1b59bf969df0a3e2628b42147b20765cee4c5f3"
-      }
-    ]
-  }
+  "hash_definitions": "source_sha256 identifies original inputs; sha256 identifies published file bytes. SOURCE_MANIFEST.json covers the complete current package."
 }

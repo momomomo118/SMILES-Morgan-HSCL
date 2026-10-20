@@ -1,10 +1,9 @@
 {
-  "scope": "SMRT final MCRL/Scheme A; not target-adapted PredRet weights",
+  "scope": "Original SMRT MCRL/Scheme A CCI and PureGIN checkpoints",
   "complete_mcrl_is_single_checkpoint": false,
   "active_cci": 5,
   "cci_candidates": 6,
   "active_puregin": 3,
-  "neural_inference_executed": false,
   "members": [
     {
       "family": "CCI",

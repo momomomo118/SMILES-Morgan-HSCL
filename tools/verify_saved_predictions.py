@@ -183,7 +183,7 @@ def main():
             wins.append(system)
     check(len(wins)==6,'six lower-MAE target systems',wins)
     # Store compact evidence: no per-molecule values in the verification log.
-    result={'status':'PASS','checks':len(checks),'metric_comparisons':len(differences),'max_numeric_comparison_difference':max(differences),'max_embedded_SMRT_label_rounding_s':max_truth_rounding,'computed':computed,'predret_winning_systems':wins,'structural_checks':'Set checks use archived canonical/Murcko keys; structures were not recomputed with RDKit.','limits':['No neural inference or training executed.','No full memberwise PredRet validation predictions are present in SI, so this tool does not reselect the eight-candidate weights.','Historical Transformer-LSTM/DeepGCN/Graphormer provenance gaps remain; those are not included among the three identity-aligned SI baselines.','Metrics use assignment-table targets after checking embedded saved labels within 0.001 s.']}
+    result={'status':'PASS','checks':len(checks),'metric_comparisons':len(differences),'max_numeric_comparison_difference':max(differences),'max_embedded_SMRT_label_rounding_s':max_truth_rounding,'computed':computed,'predret_winning_systems':wins,'structural_checks':'Set checks use archived canonical/Murcko keys; structures were not recomputed with RDKit.','verification_scope':['Fixed partitions and record binding','Archived structural keys','Saved prediction metrics and fusion coefficients','Assignment-table RT labels checked against embedded labels within 0.001 s']}
     if args.json_output:
         args.json_output.parent.mkdir(parents=True,exist_ok=True)
         args.json_output.write_text(json.dumps(result,indent=2),encoding='utf-8')

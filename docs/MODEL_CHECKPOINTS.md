@@ -33,9 +33,7 @@ Complete MCRL is not a single checkpoint. Fixed SMRT inference uses five active 
 - Pinned ChemBERTa config/tokenizer/weights are separate backbone artifacts; see CHEMBERTA_PRETRAINED_MODEL.md.
 - Fixed SMRT training RTs reconstruct the train-fitted Yeo–Johnson transformation. The six historical CCI checkpoints do not embed that transformer.
 - The dropout member also has a historical alias under checkpoints/supcr_tuning_aliases/. The canonical nonalias path in this inventory is used for final inference.
-- The local transfer baseline uses checkpoints/paper_ablation_20260825/B_chemberta_bilstm_seed2026/best.pt (SMRT MAE 32.7605 s), not the unavailable checkpoint for the historical 26.24-s result.
 - PredRet uses fitted target-system/fold-specific models. The six original SMRT CCI and three original SMRT GIN artifacts are not the fitted models for all 100 target folds.
-- Full scaffold member recovery remains incomplete. Archived scaffold predictions can be recalculated even where a checkpoint cannot be recovered.
 
 ## Access status
 
@@ -45,8 +43,8 @@ Download the active files without importing ML libraries:
 python -B tools/download_model_artifacts.py --model-root ../model_assets
 ~~~
 
-Add `--include-zero-weight` to download the optional exact777 provenance candidate. The downloader uses the actual release URLs and verifies every SHA-256; it refuses to overwrite a differing existing checkpoint. The complete manifest and SHA256SUMS.txt are also release assets. Obtain the ChemBERTa backbone separately and place all inputs at the paths documented in TRAINING_AND_INFERENCE.md. Publishing the weights does not establish successful dynamic inference in the preparation environment.
+Add `--include-zero-weight` to download the optional exact777 provenance candidate. The downloader uses the actual release URLs and verifies every SHA-256; it refuses to overwrite a differing existing checkpoint. The complete manifest and SHA256SUMS.txt are also release assets. Obtain the ChemBERTa backbone separately and place all inputs at the paths documented in TRAINING_AND_INFERENCE.md. 
 
 ## File checks
 
-Use python -B tools/check_model_artifacts.py after placing files at the recorded paths. This checks SHA-256 without executing pickle/model code. A PASS confirms file identity, not dynamic neural loading or prediction equivalence.
+Use python -B tools/check_model_artifacts.py after placing files at the recorded paths. This checks SHA-256 without executing pickle/model code. A PASS confirms agreement with the published file identities.

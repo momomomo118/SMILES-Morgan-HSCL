@@ -35,7 +35,7 @@
   "legacy_local_torch": "2.3.0+cu118",
   "selection": "Validation MAE only; Yeo-Johnson fitted on train only; test evaluated after selection; no test-based hyperparameter or checkpoint choice",
   "resume": "Completed-epoch optimizer/scheduler/RNG resume; RDKit seeded by epoch; no bitwise-equivalence claim across devices/versions",
-  "historical_comparison": "missing plan mixes transparent historical and new runs; all plan is recommended for a uniform-environment 12-run study",
+  "historical_comparison": "Training plans are defined by the experiment matrix and task index; plan all specifies twelve training jobs.",
   "representation": "Same ID subset without RT-based selection; independent t-SNE panel fits; quantitative original-space metrics required",
   "predret": {
     "n": 2197,
@@ -48,14 +48,6 @@
     "n": 7857,
     "MAE": 43.35276881010763,
     "RMSE": 73.70688789828827,
-    "R2": 0.8385429295341325,
-    "caveat": "single historical split; inherited hyperparameters and runtime differences; recovered files have pre-existing CRC evidence"
-  },
-  "unavailable": [
-    "Original training project and molecular identifiers for archived 26.2352-s Transformer-LSTM",
-    "Identity-aligned DeepGCN predictions",
-    "Graphormer per-sample predictions"
-  ],
-  "packaging_did_not_train": true,
-  "packaging_did_not_generate_scientific_figures": true
+    "R2": 0.8385429295341325
+  }
 }

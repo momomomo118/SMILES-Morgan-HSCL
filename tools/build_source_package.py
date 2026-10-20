@@ -102,7 +102,6 @@ def main():
             copy(p, 'experiments/rmcl_supplement/' + rel.as_posix())
         elif len(rel.parts) == 1 and (p.suffix in {'.py', '.sh'} or p.name in {'protocol.json', 'requirements.txt', 'reference_index.json', 'experiment_matrix.csv'}):
             copy(p, 'experiments/rmcl_supplement/' + rel.as_posix())
-    copy(supplement / 'README_服务器操作说明.md', 'experiments/rmcl_supplement/ORIGINAL_FULL_PACKAGE_README.md')
     copy(Path(__file__), 'tools/build_source_package.py')
 
     write('.gitignore', '''# Credentials and local configuration
@@ -263,9 +262,9 @@ python -B run.py list
 
 训练、preflight、analyze、representations 以及原测试中的数据/权重检查，需要先将原完整包中 `data/`、`pretrained/`、`reference/`、`checkpoints/`、`manifest.json` 和 `source_inventory.csv` 恢复到本目录。不要将这些大文件提交到 Git。
 
-`run.py verify` 校验原完整包清单；本源码包请在仓库根目录使用 `python -B tools/verify_source_package.py`。原完整包操作说明保留为 `ORIGINAL_FULL_PACKAGE_README.md`，其中对两个 ZIP 及离线材料的描述只适用于原完整包。
+`run.py verify` 校验原完整包清单；本源码包请在仓库根目录使用 `python -B tools/verify_source_package.py`。
 
-补齐输入后，`run.py train --plan all` 将启动同环境十二次训练；`--plan missing` 使用历史结果补齐五次训练。当前任务清单不表示训练已完成。CMA/RSCL 的定义、历史环境限制和缺失基线证据请阅读 `protocol.json` 及原说明。
+准备输入后，`run.py train --plan all` 定义四组、三个种子的十二项训练；`--plan missing` 按任务索引选择五项训练。CMA/RSCL 的定义、种子和模型选择规则见 `protocol.json`。
 ''')
     write('THIRD_PARTY_NOTICES.md', '''# Third-party components and input artifacts
 

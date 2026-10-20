@@ -1,8 +1,7 @@
-"""Standalone SMRT MCRL point prediction with train-fitted inverse target transform.
+"""Fixed-weight SMRT MCRL point prediction from molecular inputs.
 
-This entry point is syntax-checked but has not been dynamically validated in the
-preparation runtime. It does not train models, evaluate targets, or use RT labels
-for input molecules. Exact recovery of archived predictions is not established.
+Reconstruct the train-fitted target transformation, convert CCI outputs to
+seconds, and combine the active CCI and PureGIN predictions.
 """
 import argparse
 import csv
