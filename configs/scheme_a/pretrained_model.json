@@ -1,0 +1,172 @@
+{
+  "model_id": "seyonec/ChemBERTa-zinc-base-v1",
+  "revision": "761d6a18cf99db371e0b43baf3e2d21b3e865a20",
+  "files": [
+    {
+      "type": "file",
+      "oid": "ae8c63daedbd4206d7d40126955d4e6ab1c80f8f",
+      "size": 391,
+      "path": ".gitattributes"
+    },
+    {
+      "type": "file",
+      "oid": "8928e1b1afc013ff9149fc37c6c26bfe79c6c373",
+      "size": 2132,
+      "path": "README.md",
+      "local_sha256": "54d3f0a4d58b3eb4b9b72bbdb0dc7f7b820e46167a5efd879eba11f1f6d89087",
+      "local_bytes": 2132,
+      "local_git_blob_id": "8928e1b1afc013ff9149fc37c6c26bfe79c6c373",
+      "matches_remote": true
+    },
+    {
+      "type": "file",
+      "oid": "7d37f79227b949494ed3b680db3a1edf42577d07",
+      "size": 501,
+      "path": "config.json",
+      "local_sha256": "a484ab1497bf438b2dcbda35c6ce518ca8043539ff1a56d713aa84bcf2cba225",
+      "local_bytes": 501,
+      "local_git_blob_id": "7d37f79227b949494ed3b680db3a1edf42577d07",
+      "matches_remote": true
+    },
+    {
+      "type": "file",
+      "oid": "a33e7d347ba62dbc313c17259eab02078932e0c3",
+      "size": 176428793,
+      "lfs": {
+        "oid": "a1dbf11b565a6bf4c3c1135ff64959041eec43f65e749dd6be8723243a793482",
+        "size": 176428793,
+        "pointerSize": 134
+      },
+      "xetHash": "246504e0b6be3ae0191dd7c7caa027b099dbe9f029e52e33b1a662bc75dd9eec",
+      "path": "flax_model.msgpack",
+      "local_sha256": "a1dbf11b565a6bf4c3c1135ff64959041eec43f65e749dd6be8723243a793482",
+      "local_bytes": 176428793,
+      "local_git_blob_id": "58ee71ab8da90f3de38559a21652e32cf29def9c",
+      "matches_remote": true
+    },
+    {
+      "type": "file",
+      "oid": "78bfac424c23065bb515397b16fc7c3cce1402f8",
+      "size": 3213,
+      "path": "merges.txt",
+      "local_sha256": "f8c368d3b2f44cf4eec62aa576b69945302fcfa8eba065048d3725259671f2bb",
+      "local_bytes": 3213,
+      "local_git_blob_id": "78bfac424c23065bb515397b16fc7c3cce1402f8",
+      "matches_remote": true
+    },
+    {
+      "type": "file",
+      "oid": "76e8f85eebac104c5ed134bae05368c073d02669",
+      "size": 178812144,
+      "lfs": {
+        "oid": "bf8a23d93cca196c3712c94ec379494a74be64c83d86a63b08f03e26db547267",
+        "size": 178812144,
+        "pointerSize": 134
+      },
+      "xetHash": "0b942915eb321b03a9f8eb924006a7e08ed9aff217a9302c348bbab528a5a934",
+      "path": "pytorch_model.bin",
+      "local_sha256": "bf8a23d93cca196c3712c94ec379494a74be64c83d86a63b08f03e26db547267",
+      "local_bytes": 178812144,
+      "local_git_blob_id": "569c40e14995c25befc9c60b57af04fb244c6707",
+      "matches_remote": true
+    },
+    {
+      "type": "file",
+      "oid": "6cd1d9021e10d47aed59399af6b0e30312b46ca4",
+      "size": 150,
+      "path": "special_tokens_map.json",
+      "local_sha256": "7638f5bbbe86ef6d604ef28ad3647dc690d6d117c81c0d63e885416be8da1150",
+      "local_bytes": 150,
+      "local_git_blob_id": "6cd1d9021e10d47aed59399af6b0e30312b46ca4",
+      "matches_remote": true
+    },
+    {
+      "type": "file",
+      "oid": "1990b785864801d4c758b75d84b0d0858d8758f2",
+      "size": 166,
+      "path": "tokenizer_config.json",
+      "local_sha256": "36557a021e64d222c7ff0fef5369bc87ae6e0780264af0f35d8c6461cf106577",
+      "local_bytes": 166,
+      "local_git_blob_id": "1990b785864801d4c758b75d84b0d0858d8758f2",
+      "matches_remote": true
+    },
+    {
+      "type": "file",
+      "oid": "f20ffc61e30854d5a1ec7c6ef85a134988aac24b",
+      "size": 9429,
+      "path": "vocab.json",
+      "local_sha256": "791f9dd0e7dacb628c2f3155671a702044b1da537784eaa5663fb36ee7b8d42f",
+      "local_bytes": 9429,
+      "local_git_blob_id": "f20ffc61e30854d5a1ec7c6ef85a134988aac24b",
+      "matches_remote": true
+    }
+  ],
+  "required_files": [
+    {
+      "type": "file",
+      "oid": "7d37f79227b949494ed3b680db3a1edf42577d07",
+      "size": 501,
+      "path": "config.json",
+      "local_sha256": "a484ab1497bf438b2dcbda35c6ce518ca8043539ff1a56d713aa84bcf2cba225",
+      "local_bytes": 501,
+      "local_git_blob_id": "7d37f79227b949494ed3b680db3a1edf42577d07",
+      "matches_remote": true
+    },
+    {
+      "type": "file",
+      "oid": "78bfac424c23065bb515397b16fc7c3cce1402f8",
+      "size": 3213,
+      "path": "merges.txt",
+      "local_sha256": "f8c368d3b2f44cf4eec62aa576b69945302fcfa8eba065048d3725259671f2bb",
+      "local_bytes": 3213,
+      "local_git_blob_id": "78bfac424c23065bb515397b16fc7c3cce1402f8",
+      "matches_remote": true
+    },
+    {
+      "type": "file",
+      "oid": "76e8f85eebac104c5ed134bae05368c073d02669",
+      "size": 178812144,
+      "lfs": {
+        "oid": "bf8a23d93cca196c3712c94ec379494a74be64c83d86a63b08f03e26db547267",
+        "size": 178812144,
+        "pointerSize": 134
+      },
+      "xetHash": "0b942915eb321b03a9f8eb924006a7e08ed9aff217a9302c348bbab528a5a934",
+      "path": "pytorch_model.bin",
+      "local_sha256": "bf8a23d93cca196c3712c94ec379494a74be64c83d86a63b08f03e26db547267",
+      "local_bytes": 178812144,
+      "local_git_blob_id": "569c40e14995c25befc9c60b57af04fb244c6707",
+      "matches_remote": true
+    },
+    {
+      "type": "file",
+      "oid": "6cd1d9021e10d47aed59399af6b0e30312b46ca4",
+      "size": 150,
+      "path": "special_tokens_map.json",
+      "local_sha256": "7638f5bbbe86ef6d604ef28ad3647dc690d6d117c81c0d63e885416be8da1150",
+      "local_bytes": 150,
+      "local_git_blob_id": "6cd1d9021e10d47aed59399af6b0e30312b46ca4",
+      "matches_remote": true
+    },
+    {
+      "type": "file",
+      "oid": "1990b785864801d4c758b75d84b0d0858d8758f2",
+      "size": 166,
+      "path": "tokenizer_config.json",
+      "local_sha256": "36557a021e64d222c7ff0fef5369bc87ae6e0780264af0f35d8c6461cf106577",
+      "local_bytes": 166,
+      "local_git_blob_id": "1990b785864801d4c758b75d84b0d0858d8758f2",
+      "matches_remote": true
+    },
+    {
+      "type": "file",
+      "oid": "f20ffc61e30854d5a1ec7c6ef85a134988aac24b",
+      "size": 9429,
+      "path": "vocab.json",
+      "local_sha256": "791f9dd0e7dacb628c2f3155671a702044b1da537784eaa5663fb36ee7b8d42f",
+      "local_bytes": 9429,
+      "local_git_blob_id": "f20ffc61e30854d5a1ec7c6ef85a134988aac24b",
+      "matches_remote": true
+    }
+  ]
+}

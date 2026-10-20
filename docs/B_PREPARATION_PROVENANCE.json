@@ -1,0 +1,116 @@
+{
+  "date": "2026-10-20",
+  "public_repository": "https://github.com/momomomo118/SMILES-Morgan-HSCL",
+  "base_commit": "b5caa73bace8f280d12e79ca062301c613922855",
+  "public_files_verified": 186,
+  "public_source_manifest_verified": true,
+  "publication_performed": true,
+  "original_working_files_modified": false,
+  "model_training_executed": false,
+  "neural_inference_executed": false,
+  "existing_scientific_predictions_modified": false,
+  "si_package_restored": "Flat public layout; PDF and README are at the same root as verify_package.py. Public package manifest fully verified.",
+  "new_inference_entrypoint_status": "AST and --help only; full neural execution is not validated.",
+  "changes_before_this_provenance_file": [
+    {
+      "path": "configs/scheme_a/model_artifacts.json",
+      "action": "added",
+      "public_sha256": null,
+      "prepared_sha256": "c6837935b4e9a3d5e67f9bea3c69fae2bb7155392a3545f5b53dd0f2fed7f3c6"
+    },
+    {
+      "path": "configs/scheme_a/pretrained_model.json",
+      "action": "added",
+      "public_sha256": null,
+      "prepared_sha256": "666795d1f8914de3efa09da9264e90dc50935b99f7462f1784013199488ba4a8"
+    },
+    {
+      "path": "docs/CHEMBERTA_PRETRAINED_MODEL.md",
+      "action": "added",
+      "public_sha256": null,
+      "prepared_sha256": "c8b5d653ee03816bdb6a1d8df6f70762cec7ab201a69502ffa83f3708dbd5e73"
+    },
+    {
+      "path": "docs/MODEL_CHECKPOINTS.md",
+      "action": "added",
+      "public_sha256": null,
+      "prepared_sha256": "9d2a5aaed54985d2417a5090ea849654c2af6d8f2d08ac04a9c693a8fecadcf7"
+    },
+    {
+      "path": "docs/README_PUBLIC_b5caa73.md",
+      "action": "added",
+      "public_sha256": null,
+      "prepared_sha256": "6345a0a2f02edeb0deef04306f27d31742b96946a655dd8c82bc4b739a6f1e9f"
+    },
+    {
+      "path": "docs/RESULT_REPRODUCIBILITY.md",
+      "action": "added",
+      "public_sha256": null,
+      "prepared_sha256": "fb7c38fc138ea91b8738f7a9466ba6da3f360030b90ff519becdadbd95ec5248"
+    },
+    {
+      "path": "docs/TRAINING_AND_INFERENCE.md",
+      "action": "added",
+      "public_sha256": null,
+      "prepared_sha256": "8e7362bc5e0c63ea0ea44cc29356c2687c8f18bdff41af86d7e6ea9c9619f6c1"
+    },
+    {
+      "path": "README.md",
+      "action": "updated",
+      "public_sha256": "6345a0a2f02edeb0deef04306f27d31742b96946a655dd8c82bc4b739a6f1e9f",
+      "prepared_sha256": "6bd9992064bd9f91227c23d939e338c5377ec214ca4199dacf845aabf8b21b03"
+    },
+    {
+      "path": "SOURCE_INVENTORY.json",
+      "action": "updated",
+      "public_sha256": "d6d5a155863f21fe255e13b41444870e728c6e4e8d22342d841eb14eff00534b",
+      "prepared_sha256": "62843902f5e03553f7d1c36408b8370327499c86e5ea206da7b0f1ac4b9b4bf4"
+    },
+    {
+      "path": "tools/check_model_artifacts.py",
+      "action": "added",
+      "public_sha256": null,
+      "prepared_sha256": "8abc88178f7b314ebe692ff6b6e29fcec9af060c06bc6a42e2d1cb0c0c1889c5"
+    },
+    {
+      "path": "tools/download_model_artifacts.py",
+      "action": "added",
+      "public_sha256": null,
+      "prepared_sha256": "619a64fda57dd3d32617794f194fa95a0eeff1215bd3e062f68c928f003f6add"
+    },
+    {
+      "path": "tools/infer_mcrl_from_checkpoints.py",
+      "action": "added",
+      "public_sha256": null,
+      "prepared_sha256": "4203779ccb62a89e34dd022e49e0c7d1a71ee7afbe0dd30efff9dfaba6e9b9e6"
+    },
+    {
+      "path": "tools/print_archived_commands.py",
+      "action": "added",
+      "public_sha256": null,
+      "prepared_sha256": "45c210fb9a34213bd956012e3743e9d03ade926caf6372fd9c7f141fd8a48401"
+    },
+    {
+      "path": "tools/verify_saved_predictions.py",
+      "action": "added",
+      "public_sha256": null,
+      "prepared_sha256": "08aee7dfc87741dd18a7cfeb1eb893f2d00ff0ace9483cab66539ca6dadb7cfb"
+    }
+  ],
+  "known_source_provenance_reconciliation": [
+    {
+      "path": "data/unified/README.md",
+      "historical_recorded_sha256": "1807df8224f468e2962f9b907a64edf2da502a2cede3c98d6dacfbe4c4eb3109",
+      "current_public_sha256": "68cf9d9de513ff7f9c7ea242b1b59bf969df0a3e2628b42147b20765cee4c5f3",
+      "review_copy_sha256": "68cf9d9de513ff7f9c7ea242b1b59bf969df0a3e2628b42147b20765cee4c5f3"
+    }
+  ],
+  "checkpoint_release": {
+    "url": "https://github.com/momomomo118/SMILES-Morgan-HSCL/releases/tag/mcrl-smrt-checkpoints-20261020",
+    "assets": 9,
+    "checkpoint_bytes": 3504626361,
+    "server_sha256_verified": true,
+    "anonymous_public_access_verified": true
+  },
+  "source_update_status": "Prepared for publication after manifest verification; actual commit is recorded in the independent delivery evidence."
+}

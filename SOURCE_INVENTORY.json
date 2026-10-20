@@ -634,8 +634,8 @@
       "path": "data/unified/README.md",
       "source": "data/unified/README.md",
       "source_sha256": "1807df8224f468e2962f9b907a64edf2da502a2cede3c98d6dacfbe4c4eb3109",
-      "sha256": "1807df8224f468e2962f9b907a64edf2da502a2cede3c98d6dacfbe4c4eb3109",
-      "change": "verbatim"
+      "sha256": "68cf9d9de513ff7f9c7ea242b1b59bf969df0a3e2628b42147b20765cee4c5f3",
+      "change": "Published documentation revised in commit b5caa73bace8f280d12e79ca062301c613922855; output hash reconciled 2026-10-20, original source hash retained."
     },
     {
       "path": "experiments/rmcl_supplement/analyze.py",
@@ -882,5 +882,17 @@
       "sha256": "c7f8acb9c026fb06bf165218cfc97becad26cb6f8e665e7b866b60fd35ee88b4",
       "change": "verbatim"
     }
-  ]
+  ],
+  "review_reconciliation": {
+    "date": "2026-10-20",
+    "note": "Original source_sha256 fields are retained; output documentation hash reconciled to the reviewed public content. New preparation files are tracked by SOURCE_MANIFEST.json and B_PREPARATION_PROVENANCE.json.",
+    "entries": [
+      {
+        "path": "data/unified/README.md",
+        "historical_recorded_sha256": "1807df8224f468e2962f9b907a64edf2da502a2cede3c98d6dacfbe4c4eb3109",
+        "current_public_sha256": "68cf9d9de513ff7f9c7ea242b1b59bf969df0a3e2628b42147b20765cee4c5f3",
+        "review_copy_sha256": "68cf9d9de513ff7f9c7ea242b1b59bf969df0a3e2628b42147b20765cee4c5f3"
+      }
+    ]
+  }
 }

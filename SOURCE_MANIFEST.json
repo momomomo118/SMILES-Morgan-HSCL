@@ -1,5 +1,7 @@
 {
   "format": 1,
+  "base_public_commit": "b5caa73bace8f280d12e79ca062301c613922855",
+  "prepared_date": "2026-10-20",
   "files": [
     {
       "path": ".gitattributes",
@@ -337,6 +339,16 @@
       "sha256": "da048ce9f61db501088572b01ddd3ea9fb4b5149a4e0c8be30721b1420cdc322"
     },
     {
+      "path": "configs/scheme_a/model_artifacts.json",
+      "bytes": 7909,
+      "sha256": "c6837935b4e9a3d5e67f9bea3c69fae2bb7155392a3545f5b53dd0f2fed7f3c6"
+    },
+    {
+      "path": "configs/scheme_a/pretrained_model.json",
+      "bytes": 6289,
+      "sha256": "666795d1f8914de3efa09da9264e90dc50935b99f7462f1784013199488ba4a8"
+    },
+    {
       "path": "configs/scheme_a/weights.json",
       "bytes": 1704,
       "sha256": "33a24d517122b90576d8081d38e7bf622195faaacd88c2ad1065c5707e037a27"
@@ -372,6 +384,21 @@
       "sha256": "f25d402c4a8447a0e94c20c484d98604776167ee095e629db17fe842dc98e86f"
     },
     {
+      "path": "docs/B_PREPARATION_PROVENANCE.json",
+      "bytes": 4697,
+      "sha256": "17214bb2de3e2958592a13beb6babb944961fb5aa894d18d3a6acdc0a4c9cf4b"
+    },
+    {
+      "path": "docs/CHEMBERTA_PRETRAINED_MODEL.md",
+      "bytes": 2900,
+      "sha256": "c8b5d653ee03816bdb6a1d8df6f70762cec7ab201a69502ffa83f3708dbd5e73"
+    },
+    {
+      "path": "docs/MODEL_CHECKPOINTS.md",
+      "bytes": 4676,
+      "sha256": "9d2a5aaed54985d2417a5090ea849654c2af6d8f2d08ac04a9c693a8fecadcf7"
+    },
+    {
       "path": "docs/model_mechanism.md",
       "bytes": 2034,
       "sha256": "90e2da51207d1aba5e5c581e6a56987257aadc78b412354d06e4493bd733574c"
@@ -387,14 +414,29 @@
       "sha256": "a6daf2345380e6526cd97923b290829b4a82b08a52a4e4b4d096423a7c1978bd"
     },
     {
+      "path": "docs/README_PUBLIC_b5caa73.md",
+      "bytes": 6889,
+      "sha256": "6345a0a2f02edeb0deef04306f27d31742b96946a655dd8c82bc4b739a6f1e9f"
+    },
+    {
       "path": "docs/REPRODUCTION_DATA.md",
       "bytes": 4558,
       "sha256": "c43cf98e94fc1436327c57bdee1454313b7dc7c69ba8b23eb7d7462057042977"
     },
     {
+      "path": "docs/RESULT_REPRODUCIBILITY.md",
+      "bytes": 5148,
+      "sha256": "fb7c38fc138ea91b8738f7a9466ba6da3f360030b90ff519becdadbd95ec5248"
+    },
+    {
       "path": "docs/scheme_a_model_definition.md",
       "bytes": 1059,
       "sha256": "a0d324d6740e71fdcccabe2e5430861e3c93f6f8b26d20e7c3acd5f3432b440c"
+    },
+    {
+      "path": "docs/TRAINING_AND_INFERENCE.md",
+      "bytes": 11512,
+      "sha256": "8e7362bc5e0c63ea0ea44cc29356c2687c8f18bdff41af86d7e6ea9c9619f6c1"
     },
     {
       "path": "examples/predictions_demo.csv",
@@ -578,8 +620,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 6889,
-      "sha256": "6345a0a2f02edeb0deef04306f27d31742b96946a655dd8c82bc4b739a6f1e9f"
+      "bytes": 5578,
+      "sha256": "6bd9992064bd9f91227c23d939e338c5377ec214ca4199dacf845aabf8b21b03"
     },
     {
       "path": "requirements-optional.txt",
@@ -688,8 +730,8 @@
     },
     {
       "path": "SOURCE_INVENTORY.json",
-      "bytes": 42581,
-      "sha256": "d6d5a155863f21fe255e13b41444870e728c6e4e8d22342d841eb14eff00534b"
+      "bytes": 44284,
+      "sha256": "62843902f5e03553f7d1c36408b8370327499c86e5ea206da7b0f1ac4b9b4bf4"
     },
     {
       "path": "supporting_information/configs/ablation_run_arguments.json",
@@ -917,9 +959,34 @@
       "sha256": "c7f8acb9c026fb06bf165218cfc97becad26cb6f8e665e7b866b60fd35ee88b4"
     },
     {
+      "path": "tools/check_model_artifacts.py",
+      "bytes": 2088,
+      "sha256": "8abc88178f7b314ebe692ff6b6e29fcec9af060c06bc6a42e2d1cb0c0c1889c5"
+    },
+    {
+      "path": "tools/download_model_artifacts.py",
+      "bytes": 2627,
+      "sha256": "619a64fda57dd3d32617794f194fa95a0eeff1215bd3e062f68c928f003f6add"
+    },
+    {
+      "path": "tools/infer_mcrl_from_checkpoints.py",
+      "bytes": 5595,
+      "sha256": "4203779ccb62a89e34dd022e49e0c7d1a71ee7afbe0dd30efff9dfaba6e9b9e6"
+    },
+    {
       "path": "tools/prepare_reproduction_data.py",
       "bytes": 4181,
       "sha256": "9cb3821f7c449c62669ce3a18996b3337aec80d6aadcd41ba85e4539f9b1436e"
+    },
+    {
+      "path": "tools/print_archived_commands.py",
+      "bytes": 3020,
+      "sha256": "45c210fb9a34213bd956012e3743e9d03ade926caf6372fd9c7f141fd8a48401"
+    },
+    {
+      "path": "tools/verify_saved_predictions.py",
+      "bytes": 11926,
+      "sha256": "08aee7dfc87741dd18a7cfeb1eb893f2d00ff0ace9483cab66539ca6dadb7cfb"
     },
     {
       "path": "tools/verify_source_package.py",
